@@ -148,7 +148,9 @@ func _ready() -> void:
 			auto_roam = true
 
 	_build_env()
+	GSurf.set_palette(Color(0.88, 1.02, 1.06))   # cool alien grade across every built surface
 	_build_player()
+	_build_motes()
 	# Prompt-driven sky + weather owns the env/sun from here; defaults to clear day
 	# until world.json's "sky" block is read in _boot. (See _apply_weather.)
 	weather = Weather3D.new()
@@ -226,16 +228,23 @@ func _boot() -> void:
 		_parse_manifest(mr[3])
 	builder.props_pool = props_pool
 
-	# world.json (required) — a loose file served next to index.html
-	var wq := HTTPRequest.new()
-	add_child(wq)
-	wq.request(world_url)
-	var wr = await wq.request_completed
-	wq.queue_free()
-	if wr[1] != 200:
-		stats.text = "world.json fetch failed (HTTP %s) @ %s" % [str(wr[1]), world_url]
-		return
-	var raw := (wr[3] as PackedByteArray).get_string_from_utf8()
+	# world.json (required) — a loose file served next to index.html.
+	# --local-world (headless verify hook): read the project-local copy instead of HTTP.
+	var raw := ""
+	if "--local-world" in OS.get_cmdline_user_args():
+		var lf := FileAccess.open("res://world.json", FileAccess.READ)
+		if lf != null:
+			raw = lf.get_as_text()
+	else:
+		var wq := HTTPRequest.new()
+		add_child(wq)
+		wq.request(world_url)
+		var wr = await wq.request_completed
+		wq.queue_free()
+		if wr[1] != 200:
+			stats.text = "world.json fetch failed (HTTP %s) @ %s" % [str(wr[1]), world_url]
+			return
+		raw = (wr[3] as PackedByteArray).get_string_from_utf8()
 	var world = JSON.parse_string(raw)
 	if not (world is Dictionary):
 		stats.text = "world.json parse error"
@@ -246,13 +255,21 @@ func _boot() -> void:
 	rpg.load_weapons(world.get("weapons", {}))   # Wave 4: world "weapons" merge over inline ITEMS
 
 	# quests.json (fetched alongside world.json — the same data qgcheck validates)
-	var qq := HTTPRequest.new()
-	add_child(qq)
-	qq.request(world_url.replace("world.json", "quests.json"))
-	var qr = await qq.request_completed
-	qq.queue_free()
-	if qr[1] == 200:
-		var qdata = JSON.parse_string((qr[3] as PackedByteArray).get_string_from_utf8())
+	var qraw := ""
+	if "--local-world" in OS.get_cmdline_user_args():
+		var qf := FileAccess.open("res://quests.json", FileAccess.READ)
+		if qf != null:
+			qraw = qf.get_as_text()
+	else:
+		var qq := HTTPRequest.new()
+		add_child(qq)
+		qq.request(world_url.replace("world.json", "quests.json"))
+		var qr = await qq.request_completed
+		qq.queue_free()
+		if qr[1] == 200:
+			qraw = (qr[3] as PackedByteArray).get_string_from_utf8()
+	if qraw != "":
+		var qdata = JSON.parse_string(qraw)
 		if qdata is Dictionary:
 			quests_data = qdata
 			quest.load_quests(qdata)
@@ -316,6 +333,12 @@ func _boot() -> void:
 			player.global_position = sp
 		print("GOGI_SAVE restored")
 
+	print("GOGI_BOOT_COMPLETE")
+	if "--logic-test" in OS.get_cmdline_user_args():
+		var ts = load("res://logic_test.gd")
+		if ts != null:
+			add_child((ts as GDScript).new())
+
 
 func _physics_process(delta: float) -> void:
 	if player == null:
@@ -376,6 +399,14 @@ func _physics_process(delta: float) -> void:
 
 
 func _chunk_physics(delta: float) -> void:
+	# FALL-CATCHER: if the body ever ends up far below any possible ground (a cell not yet
+	# built under a fast-moving player on a slow device), reseat it on the terrain instead
+	# of falling forever into the void.
+	if player.global_position.y < -30.0 and chunk_manager != null:
+		var p := player.global_position
+		p.y = chunk_manager._ground_y(p.x, p.z) + 1.5
+		player.global_position = p
+		player.velocity = Vector3.ZERO
 	# CONTRACT C: a ladder takes over vertical motion entirely (the ONE no-vertical-face exception).
 	if climbing != null:
 		_climb_physics(delta)
@@ -427,7 +458,12 @@ func _chunk_physics(delta: float) -> void:
 	player.velocity.x = dir.x * 6.0
 	player.velocity.z = dir.z * 6.0
 	if player.is_on_floor():
-		player.velocity.y = 0.0
+		# is_on_floor() goes STALE when the body underfoot despawns while we're motionless
+		# (e.g. killing an enemy you stand on) — probe for real ground before trusting it.
+		if dir.length() < 0.05 and not _ground_under_player():
+			player.velocity.y = -1.0   # kick the fall; real gravity takes over next tick
+		else:
+			player.velocity.y = 0.0
 	else:
 		player.velocity.y -= GRAVITY * delta
 	if dir.length() > 0.1:
@@ -435,6 +471,17 @@ func _chunk_physics(delta: float) -> void:
 		player.look_at(Vector3(look.x, player.global_position.y, look.z), Vector3.UP)
 	player.move_and_slide()
 	_step_up_assist(dir)
+
+
+# TRUE-ground probe under the player's feet (world OR enemy layer) — backs up is_on_floor()
+# when it can go stale (see the walk branch above).
+func _ground_under_player() -> bool:
+	var space := player.get_world_3d().direct_space_state
+	var q := PhysicsRayQueryParameters3D.create(
+		player.global_position + Vector3(0, 0.2, 0),
+		player.global_position - Vector3(0, 0.8, 0), L_WORLD | L_ENEMY)
+	q.exclude = [player.get_rid()]
+	return not space.intersect_ray(q).is_empty()
 
 
 # CONTRACT C (player half): joystick-Y climbs Y between base_y/top_y at CLIMB_SPEED, pinned to the
@@ -541,6 +588,7 @@ func _process(delta: float) -> void:
 	if _ally_scan_t <= 0.0:
 		_ally_scan_t = 0.3
 		_scan_elders()
+		_publish_state()
 	_update_nav_aid()
 	_update_hero_anim()
 	if stats:
@@ -1102,6 +1150,22 @@ func _on_gogi_set_time(args: Array) -> void:
 	print("GOGI_TIME ", weather.time_state)
 
 
+# PUSH-based live-state publication (web only, ~3x/sec): JavaScriptBridge callbacks can't
+# return values to page JS, so the pull-style __gogiGetPlayerRaw yields null in harnesses —
+# instead we PUSH the state into window.__gogiPlayerState (+ solids, throttled) and
+# gogiGetPlayer/gogiSolids read those. Powers the verify feel-probes; inert on device.
+var _solids_pub_t := 0.0
+
+func _publish_state() -> void:
+	if not OS.has_feature("web") or player == null:
+		return
+	JavaScriptBridge.eval("window.__gogiPlayerState=%s;window.gogiGetPlayer=function(){return window.__gogiPlayerState||null};" % _on_gogi_get_player([]), true)
+	_solids_pub_t -= 0.3
+	if _solids_pub_t <= 0.0:
+		_solids_pub_t = 3.0
+		JavaScriptBridge.eval("window.__gogiSolidsData=%s;window.gogiSolids=function(){return window.__gogiSolidsData||[]};" % _on_gogi_solids([]), true)
+
+
 # window.gogiGetPlayer() — live player state as a JSON string (the JS wrapper parses it). Fields match
 # the verify.mjs probe contract (verify.mjs:1255-1258). Off-ladder `climbing` is null -> false.
 func _on_gogi_get_player(_args: Array) -> String:
@@ -1251,6 +1315,42 @@ func _mat(c: Color) -> StandardMaterial3D:
 	return m
 
 
+# Bioluminescent spore-motes drifting around the camera — the cheap ambient cue that sells
+# the alien world, day and night (CPUParticles3D, additive, ~free).
+func _build_motes() -> void:
+	var p := CPUParticles3D.new()
+	p.amount = 36
+	p.lifetime = 7.0
+	p.preprocess = 7.0
+	p.emission_shape = CPUParticles3D.EMISSION_SHAPE_BOX
+	p.emission_box_extents = Vector3(16, 6, 16)
+	p.direction = Vector3(0, 1, 0)
+	p.spread = 180.0
+	p.gravity = Vector3.ZERO
+	p.initial_velocity_min = 0.15
+	p.initial_velocity_max = 0.5
+	p.scale_amount_min = 0.05
+	p.scale_amount_max = 0.12
+	p.color = Color(0.35, 0.95, 0.85, 0.8)
+	var mesh := SphereMesh.new()
+	mesh.radius = 0.5
+	mesh.height = 1.0
+	mesh.radial_segments = 6
+	mesh.rings = 3
+	var m := StandardMaterial3D.new()
+	m.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
+	m.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
+	m.blend_mode = BaseMaterial3D.BLEND_MODE_ADD
+	m.albedo_color = Color(0.35, 0.95, 0.85, 0.55)
+	m.emission_enabled = true
+	m.emission = Color(0.25, 0.9, 0.8)
+	m.emission_energy_multiplier = 2.0
+	mesh.material = m
+	p.mesh = mesh
+	p.emitting = true
+	cam_rig.add_child(p)
+
+
 # Seat a MODEL avatar so its feet rest on the floor (y=0 at the body origin).
 # Library/Meshy character GLBs often have their origin at the hips/centre, so
 # without this the feet sink under the floor — props get the same treatment in
@@ -1298,10 +1398,14 @@ func _attach_hero_model() -> void:
 	var url := _norm(hero)
 	if url == "":
 		return
-	var node := await _fetch_glb_scene(url)
+	var node: Node3D = null
+	for attempt in range(4):
+		node = await _fetch_glb_scene(url)
+		if node != null:
+			break
+		await get_tree().create_timer(1.0 + float(attempt)).timeout
 	if node == null:
-		node = await _fetch_glb_scene(url)   # ONE retry, then degrade silently to the capsule
-	if node == null:
+		print("GOGI_HERO attach FAILED after retries: ", url)
 		return
 	node.name = "GogiHeroAvatar"
 	player.add_child(node)

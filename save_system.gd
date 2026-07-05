@@ -184,21 +184,30 @@ func load_state() -> Dictionary:
 	return {}
 
 
+var _pending := false
+
+
 func save_now() -> void:
-	if _saving or main == null or rpg == null:
-		_dirty = true
+	if main == null or rpg == null:
+		return
+	if _saving:
+		_pending = true   # a save is in flight — the drain loop below re-saves the LATEST state
 		return
 	_saving = true
 	_dirty = false
-	var req := HTTPRequest.new()
-	add_child(req)
-	var payload := JSON.stringify([{"id": device_key, "user_id": "device", "data": collect_state()}])
-	var hdrs := _headers()
-	hdrs.append("Prefer: resolution=merge-duplicates")
-	var url := "%s/rest/v1/%s" % [SB_URL, TABLE]
-	if req.request(url, hdrs, HTTPClient.METHOD_POST, payload) == OK:
-		await req.request_completed
-	req.queue_free()
+	while true:
+		_pending = false
+		var req := HTTPRequest.new()
+		add_child(req)
+		var payload := JSON.stringify([{"id": device_key, "user_id": "device", "data": collect_state()}])
+		var hdrs := _headers()
+		hdrs.append("Prefer: resolution=merge-duplicates")
+		var url := "%s/rest/v1/%s" % [SB_URL, TABLE]
+		if req.request(url, hdrs, HTTPClient.METHOD_POST, payload) == OK:
+			await req.request_completed
+		req.queue_free()
+		if not _pending:
+			break
 	_saving = false
 
 

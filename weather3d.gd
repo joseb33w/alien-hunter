@@ -42,9 +42,9 @@ const TIME := {
 	# Night is "moonlit, playable" — geometry must stay readable on phone screens
 	# (dark sky colours keep it reading as night; do NOT drop the light floor).
 	"night": {
-		"sun_rot": Vector3(-52, -150, 0), "sun_energy": 0.38, "sun_color": Color(0.58, 0.68, 1.0),
+		"sun_rot": Vector3(-52, -150, 0), "sun_energy": 0.5, "sun_color": Color(0.58, 0.68, 1.0),
 		"top": Color(0.02, 0.03, 0.1), "horizon": Color(0.06, 0.08, 0.17), "ground": Color(0.04, 0.05, 0.09),
-		"ambient": Color(0.24, 0.27, 0.4), "ambient_energy": 0.75,
+		"ambient": Color(0.30, 0.34, 0.48), "ambient_energy": 0.95,
 	},
 }
 

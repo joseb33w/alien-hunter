@@ -1,0 +1,7724 @@
+{
+ "mode": "chunk",
+ "title": "Xenoreach",
+ "grid": {
+  "cell_size": 16
+ },
+ "start_cell": [
+  3,
+  6
+ ],
+ "goal": {
+  "type": "kill",
+  "target": "broodmaw"
+ },
+ "items": {
+  "plasma_caster": {
+   "consumed": false
+  },
+  "skarn_spitter": {
+   "consumed": false
+  },
+  "veyth_shard": {
+   "consumed": false
+  },
+  "gorra_maul": {
+   "consumed": false
+  },
+  "mylah_staff": {
+   "consumed": false
+  },
+  "broodmaw_fang": {
+   "consumed": false
+  },
+  "trophy_relic": {
+   "consumed": false
+  },
+  "trophy_skull": {
+   "consumed": false
+  },
+  "trophy_idol": {
+   "consumed": false
+  },
+  "potion": {
+   "consumed": false
+  }
+ },
+ "terrain": {
+  "amplitude": 9,
+  "frequency": 0.012,
+  "seed": 384,
+  "octaves": 4,
+  "material": {
+   "preset": "grass",
+   "color": [
+    0.13,
+    0.3,
+    0.27
+   ]
+  },
+  "warp": 0.4,
+  "floor": 1.8
+ },
+ "water": {
+  "level": -1.5,
+  "depth": 6,
+  "shallow": [
+   0.1,
+   0.45,
+   0.5
+  ],
+  "deep": [
+   0.02,
+   0.08,
+   0.22
+  ],
+  "wave_amp": 0.25
+ },
+ "vehicles": [
+  {
+   "pos": [
+    58,
+    96
+   ],
+   "profile": "car",
+   "name": "Dune Skimmer",
+   "color": [
+    0.75,
+    0.3,
+    0.1
+   ]
+  },
+  {
+   "pos": [
+    76,
+    101
+   ],
+   "profile": "tank",
+   "name": "Ravager Crawler",
+   "color": [
+    0.25,
+    0.3,
+    0.35
+   ]
+  },
+  {
+   "pos": [
+    2,
+    140
+   ],
+   "profile": "boat",
+   "name": "Tide Skiff",
+   "color": [
+    0.15,
+    0.45,
+    0.5
+   ]
+  },
+  {
+   "pos": [
+    30,
+    76
+   ],
+   "profile": "plane",
+   "name": "Talon Skiff",
+   "color": [
+    0.35,
+    0.2,
+    0.45
+   ]
+  },
+  {
+   "pos": [
+    34,
+    112
+   ],
+   "profile": "horse",
+   "name": "Razorstrider",
+   "model": "/cloud-buzjpf9z8on0ylyzwny3/models/strider.glb"
+  },
+  {
+   "pos": [
+    128,
+    46
+   ],
+   "profile": "bull",
+   "name": "Duneback",
+   "model": "/cloud-buzjpf9z8on0ylyzwny3/models/duneback.glb"
+  },
+  {
+   "pos": [
+    86,
+    58
+   ],
+   "profile": "dragon",
+   "name": "Skyray",
+   "model": "/cloud-buzjpf9z8on0ylyzwny3/models/skyray.glb"
+  }
+ ],
+ "cells": [
+  {
+   "cell": [
+    0,
+    0
+   ],
+   "ground": {
+    "preset": "sand",
+    "color": [
+     0.56,
+     0.47,
+     0.6
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/kenney_nature/Cattail_2.glb",
+     "count": 7
+    },
+    {
+     "url": "props/q_unature/PalmTree_2.glb",
+     "count": 3
+    },
+    {
+     "kind": "rock",
+     "count": 3
+    }
+   ],
+   "props": [
+    {
+     "url": "props/kenney_nature/Log_2.glb",
+     "pos": [
+      4,
+      -4
+     ]
+    },
+    {
+     "url": "props/kenney_nature/Shell_Layered.glb",
+     "pos": [
+      -4,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "cell": [
+    1,
+    0
+   ],
+   "ground": {
+    "preset": "sand",
+    "color": [
+     0.56,
+     0.47,
+     0.6
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/kenney_nature/Cattail_4.glb",
+     "count": 6
+    },
+    {
+     "url": "props/kenney_nature/Grass_Clump_2.glb",
+     "count": 8
+    },
+    {
+     "kind": "rock",
+     "count": 4
+    }
+   ],
+   "props": [
+    {
+     "url": "props/q_unature/PalmTree_2.glb",
+     "pos": [
+      -5,
+      5
+     ]
+    },
+    {
+     "url": "props/kenney_nature/Shell_Layered.glb",
+     "pos": [
+      5,
+      -2
+     ]
+    }
+   ]
+  },
+  {
+   "cell": [
+    2,
+    0
+   ],
+   "ground": {
+    "preset": "grass",
+    "color": [
+     0.13,
+     0.3,
+     0.27
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/q_unature/Willow_1.glb",
+     "count": 9
+    },
+    {
+     "url": "props/q_unature/Willow_2.glb",
+     "count": 7
+    },
+    {
+     "url": "props/mega_nature/Mushroom_Laetiporus.glb",
+     "count": 6
+    },
+    {
+     "url": "props/q_unature/Rock_Moss_2.glb",
+     "count": 4
+    }
+   ],
+   "props": [
+    {
+     "url": "props/mega_nature/Plant_1_Big.glb",
+     "pos": [
+      5,
+      -4
+     ]
+    },
+    {
+     "url": "props/kenney_nature/Mushroom_Red_Spotted.glb",
+     "pos": [
+      -5,
+      3
+     ]
+    },
+    {
+     "url": "props/q_unature/TreeStump_Moss.glb",
+     "pos": [
+      3,
+      5
+     ]
+    }
+   ]
+  },
+  {
+   "cell": [
+    3,
+    0
+   ],
+   "ground": {
+    "preset": "grass",
+    "color": [
+     0.13,
+     0.3,
+     0.27
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/q_unature/Willow_2.glb",
+     "count": 8
+    },
+    {
+     "url": "props/q_unature/Willow_3.glb",
+     "count": 8
+    },
+    {
+     "url": "props/q_unature/Plant_5.glb",
+     "count": 6
+    },
+    {
+     "url": "props/mega_nature/Mushroom_Laetiporus.glb",
+     "count": 5
+    },
+    {
+     "kind": "rock",
+     "count": 3
+    }
+   ],
+   "props": [
+    {
+     "url": "props/mega_nature/Plant_1_Big.glb",
+     "pos": [
+      -5,
+      -5
+     ]
+    },
+    {
+     "url": "props/mega_nature/Fern_1.glb",
+     "pos": [
+      4,
+      4
+     ]
+    }
+   ]
+  },
+  {
+   "cell": [
+    4,
+    0
+   ],
+   "ground": {
+    "preset": "grass",
+    "color": [
+     0.13,
+     0.3,
+     0.27
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/q_unature/Willow_1.glb",
+     "count": 9
+    },
+    {
+     "url": "props/q_unature/Willow_2.glb",
+     "count": 7
+    },
+    {
+     "url": "props/mega_nature/Mushroom_Laetiporus.glb",
+     "count": 6
+    },
+    {
+     "url": "props/q_unature/Rock_Moss_2.glb",
+     "count": 4
+    }
+   ],
+   "props": [
+    {
+     "url": "props/mega_nature/Plant_1_Big.glb",
+     "pos": [
+      5,
+      -4
+     ]
+    },
+    {
+     "url": "props/kenney_nature/Mushroom_Red_Spotted.glb",
+     "pos": [
+      -5,
+      3
+     ]
+    },
+    {
+     "url": "props/q_unature/TreeStump_Moss.glb",
+     "pos": [
+      3,
+      5
+     ]
+    }
+   ]
+  },
+  {
+   "cell": [
+    5,
+    0
+   ],
+   "ground": {
+    "preset": "grass",
+    "color": [
+     0.13,
+     0.3,
+     0.27
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/q_unature/Willow_2.glb",
+     "count": 8
+    },
+    {
+     "url": "props/q_unature/Willow_3.glb",
+     "count": 8
+    },
+    {
+     "url": "props/q_unature/Plant_5.glb",
+     "count": 6
+    },
+    {
+     "url": "props/mega_nature/Mushroom_Laetiporus.glb",
+     "count": 5
+    },
+    {
+     "kind": "rock",
+     "count": 3
+    }
+   ],
+   "props": [
+    {
+     "url": "props/mega_nature/Plant_1_Big.glb",
+     "pos": [
+      -5,
+      -5
+     ]
+    },
+    {
+     "url": "props/mega_nature/Fern_1.glb",
+     "pos": [
+      4,
+      4
+     ]
+    }
+   ],
+   "landmark": {
+    "url": "props/q_unature/Willow_5.glb",
+    "pos": [
+     -2,
+     2
+    ]
+   }
+  },
+  {
+   "cell": [
+    6,
+    0
+   ],
+   "ground": {
+    "preset": "grass",
+    "color": [
+     0.13,
+     0.3,
+     0.27
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/q_unature/Willow_1.glb",
+     "count": 9
+    },
+    {
+     "url": "props/q_unature/Willow_2.glb",
+     "count": 7
+    },
+    {
+     "url": "props/mega_nature/Mushroom_Laetiporus.glb",
+     "count": 6
+    },
+    {
+     "url": "props/q_unature/Rock_Moss_2.glb",
+     "count": 4
+    }
+   ],
+   "props": [
+    {
+     "url": "props/mega_nature/Plant_1_Big.glb",
+     "pos": [
+      5,
+      -4
+     ]
+    },
+    {
+     "url": "props/kenney_nature/Mushroom_Red_Spotted.glb",
+     "pos": [
+      -5,
+      3
+     ]
+    },
+    {
+     "url": "props/q_unature/TreeStump_Moss.glb",
+     "pos": [
+      3,
+      5
+     ]
+    }
+   ]
+  },
+  {
+   "cell": [
+    7,
+    0
+   ],
+   "ground": {
+    "preset": "sand",
+    "color": [
+     0.56,
+     0.47,
+     0.6
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/q_unature/Rock_6.glb",
+     "count": 6
+    },
+    {
+     "url": "props/q_unature/Rock_7.glb",
+     "count": 5
+    },
+    {
+     "kind": "rock",
+     "count": 4
+    }
+   ],
+   "props": [
+    {
+     "url": "props/q_unature/Rock_7.glb",
+     "pos": [
+      5,
+      4
+     ]
+    },
+    {
+     "url": "props/q_unature/Rock_2.glb",
+     "pos": [
+      -5,
+      -3
+     ]
+    }
+   ],
+   "landmark": {
+    "url": "props/kenney_nature/Mountain_1.glb",
+    "pos": [
+     0,
+     -2
+    ]
+   },
+   "chest": {
+    "pos": [
+     5,
+     5
+    ],
+    "contents": [
+     "trophy_skull"
+    ],
+    "gold": 50
+   }
+  },
+  {
+   "cell": [
+    8,
+    0
+   ],
+   "ground": {
+    "preset": "sand",
+    "color": [
+     0.56,
+     0.47,
+     0.6
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/q_unature/Rock_2.glb",
+     "count": 7
+    },
+    {
+     "url": "props/q_unature/Rock_6.glb",
+     "count": 5
+    },
+    {
+     "url": "props/kenney_nature/Rock_4.glb",
+     "count": 3
+    }
+   ],
+   "props": [
+    {
+     "url": "props/q_unature/Rock_7.glb",
+     "pos": [
+      5,
+      4
+     ]
+    },
+    {
+     "url": "props/q_unature/Rock_2.glb",
+     "pos": [
+      -5,
+      -3
+     ]
+    }
+   ]
+  },
+  {
+   "cell": [
+    9,
+    0
+   ],
+   "ground": {
+    "preset": "sand",
+    "color": [
+     0.56,
+     0.47,
+     0.6
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/q_unature/Rock_6.glb",
+     "count": 6
+    },
+    {
+     "url": "props/q_unature/Rock_7.glb",
+     "count": 5
+    },
+    {
+     "kind": "rock",
+     "count": 4
+    }
+   ],
+   "props": [
+    {
+     "url": "props/q_unature/Rock_7.glb",
+     "pos": [
+      5,
+      4
+     ]
+    },
+    {
+     "url": "props/q_unature/Rock_2.glb",
+     "pos": [
+      -5,
+      -3
+     ]
+    }
+   ]
+  },
+  {
+   "cell": [
+    10,
+    0
+   ],
+   "ground": {
+    "preset": "sand",
+    "color": [
+     0.56,
+     0.47,
+     0.6
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/q_unature/Rock_2.glb",
+     "count": 7
+    },
+    {
+     "url": "props/q_unature/Rock_6.glb",
+     "count": 5
+    },
+    {
+     "url": "props/kenney_nature/Rock_4.glb",
+     "count": 3
+    }
+   ],
+   "props": [
+    {
+     "url": "props/q_unature/Rock_7.glb",
+     "pos": [
+      5,
+      4
+     ]
+    },
+    {
+     "url": "props/q_unature/Rock_2.glb",
+     "pos": [
+      -5,
+      -3
+     ]
+    }
+   ]
+  },
+  {
+   "cell": [
+    11,
+    0
+   ],
+   "ground": {
+    "preset": "sand",
+    "color": [
+     0.56,
+     0.47,
+     0.6
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/q_unature/Rock_6.glb",
+     "count": 6
+    },
+    {
+     "url": "props/q_unature/Rock_7.glb",
+     "count": 5
+    },
+    {
+     "kind": "rock",
+     "count": 4
+    }
+   ],
+   "props": [
+    {
+     "url": "props/q_unature/Rock_7.glb",
+     "pos": [
+      5,
+      4
+     ]
+    },
+    {
+     "url": "props/q_unature/Rock_2.glb",
+     "pos": [
+      -5,
+      -3
+     ]
+    }
+   ],
+   "landmark": {
+    "url": "props/kenney_nature/Mountain_2.glb",
+    "pos": [
+     1,
+     1
+    ]
+   }
+  },
+  {
+   "cell": [
+    0,
+    1
+   ],
+   "ground": {
+    "preset": "sand",
+    "color": [
+     0.56,
+     0.47,
+     0.6
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/kenney_nature/Cattail_4.glb",
+     "count": 6
+    },
+    {
+     "url": "props/kenney_nature/Grass_Clump_2.glb",
+     "count": 8
+    },
+    {
+     "kind": "rock",
+     "count": 4
+    }
+   ],
+   "props": [
+    {
+     "url": "props/q_unature/PalmTree_2.glb",
+     "pos": [
+      -5,
+      5
+     ]
+    },
+    {
+     "url": "props/kenney_nature/Shell_Layered.glb",
+     "pos": [
+      5,
+      -2
+     ]
+    }
+   ]
+  },
+  {
+   "cell": [
+    1,
+    1
+   ],
+   "ground": {
+    "preset": "sand",
+    "color": [
+     0.56,
+     0.47,
+     0.6
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/kenney_nature/Cattail_2.glb",
+     "count": 7
+    },
+    {
+     "url": "props/q_unature/PalmTree_2.glb",
+     "count": 3
+    },
+    {
+     "kind": "rock",
+     "count": 3
+    }
+   ],
+   "props": [
+    {
+     "url": "props/kenney_nature/Log_2.glb",
+     "pos": [
+      4,
+      -4
+     ]
+    },
+    {
+     "url": "props/kenney_nature/Shell_Layered.glb",
+     "pos": [
+      -4,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "cell": [
+    2,
+    1
+   ],
+   "ground": {
+    "preset": "grass",
+    "color": [
+     0.13,
+     0.3,
+     0.27
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/q_unature/Willow_2.glb",
+     "count": 8
+    },
+    {
+     "url": "props/q_unature/Willow_3.glb",
+     "count": 8
+    },
+    {
+     "url": "props/q_unature/Plant_5.glb",
+     "count": 6
+    },
+    {
+     "url": "props/mega_nature/Mushroom_Laetiporus.glb",
+     "count": 5
+    },
+    {
+     "kind": "rock",
+     "count": 3
+    }
+   ],
+   "props": [
+    {
+     "url": "props/mega_nature/Plant_1_Big.glb",
+     "pos": [
+      -5,
+      -5
+     ]
+    },
+    {
+     "url": "props/mega_nature/Fern_1.glb",
+     "pos": [
+      4,
+      4
+     ]
+    }
+   ],
+   "enemies": 2,
+   "enemy_type": "veyth",
+   "enemy_model": "/cloud-buzjpf9z8on0ylyzwny3/models/veyth.glb"
+  },
+  {
+   "cell": [
+    3,
+    1
+   ],
+   "ground": {
+    "preset": "grass",
+    "color": [
+     0.13,
+     0.3,
+     0.27
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/q_unature/Willow_1.glb",
+     "count": 9
+    },
+    {
+     "url": "props/q_unature/Willow_2.glb",
+     "count": 7
+    },
+    {
+     "url": "props/mega_nature/Mushroom_Laetiporus.glb",
+     "count": 6
+    },
+    {
+     "url": "props/q_unature/Rock_Moss_2.glb",
+     "count": 4
+    }
+   ],
+   "props": [
+    {
+     "url": "props/mega_nature/Plant_1_Big.glb",
+     "pos": [
+      5,
+      -4
+     ]
+    },
+    {
+     "url": "props/kenney_nature/Mushroom_Red_Spotted.glb",
+     "pos": [
+      -5,
+      3
+     ]
+    },
+    {
+     "url": "props/q_unature/TreeStump_Moss.glb",
+     "pos": [
+      3,
+      5
+     ]
+    }
+   ],
+   "landmark": {
+    "url": "props/q_unature/Willow_5.glb",
+    "pos": [
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "cell": [
+    4,
+    1
+   ],
+   "ground": {
+    "preset": "grass",
+    "color": [
+     0.13,
+     0.3,
+     0.27
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/q_unature/Willow_2.glb",
+     "count": 8
+    },
+    {
+     "url": "props/q_unature/Willow_3.glb",
+     "count": 8
+    },
+    {
+     "url": "props/q_unature/Plant_5.glb",
+     "count": 6
+    },
+    {
+     "url": "props/mega_nature/Mushroom_Laetiporus.glb",
+     "count": 5
+    },
+    {
+     "kind": "rock",
+     "count": 3
+    }
+   ],
+   "props": [
+    {
+     "url": "props/mega_nature/Plant_1_Big.glb",
+     "pos": [
+      -5,
+      -5
+     ]
+    },
+    {
+     "url": "props/mega_nature/Fern_1.glb",
+     "pos": [
+      4,
+      4
+     ]
+    }
+   ],
+   "chest": {
+    "pos": [
+     4,
+     -4
+    ],
+    "gold": 45
+   }
+  },
+  {
+   "cell": [
+    5,
+    1
+   ],
+   "ground": {
+    "preset": "grass",
+    "color": [
+     0.13,
+     0.3,
+     0.27
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/kenney_nature/Grass_Clump_2.glb",
+     "count": 8
+    },
+    {
+     "url": "props/mega_nature/Grass_Wispy_Tall.glb",
+     "count": 6
+    },
+    {
+     "url": "props/mega_nature/Flower_3_Group.glb",
+     "count": 4
+    }
+   ],
+   "props": [
+    {
+     "url": "props/kenney_nature/Tent_Leanto_2.glb",
+     "pos": [
+      -5,
+      3
+     ]
+    },
+    {
+     "url": "props/kenney_nature/Timber_Stack_1.glb",
+     "pos": [
+      5,
+      -4
+     ]
+    }
+   ],
+   "roads": [
+    {
+     "dir": "ns",
+     "width": 6
+    }
+   ]
+  },
+  {
+   "cell": [
+    6,
+    1
+   ],
+   "ground": {
+    "preset": "dirt",
+    "color": [
+     0.26,
+     0.18,
+     0.3
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/q_unature/Willow_2.glb",
+     "count": 8
+    },
+    {
+     "url": "props/q_unature/Willow_3.glb",
+     "count": 8
+    },
+    {
+     "url": "props/q_unature/Plant_5.glb",
+     "count": 6
+    },
+    {
+     "url": "props/mega_nature/Mushroom_Laetiporus.glb",
+     "count": 5
+    },
+    {
+     "kind": "rock",
+     "count": 3
+    }
+   ],
+   "props": [
+    {
+     "url": "props/kenney_nature/Tent_Leanto_1.glb",
+     "pos": [
+      4,
+      4
+     ]
+    },
+    {
+     "url": "props/kenney_nature/Log_1.glb",
+     "pos": [
+      -4,
+      -4
+     ]
+    }
+   ],
+   "enemies": 2,
+   "enemy_type": "veyth",
+   "enemy_model": "/cloud-buzjpf9z8on0ylyzwny3/models/veyth.glb"
+  },
+  {
+   "cell": [
+    7,
+    1
+   ],
+   "ground": {
+    "preset": "sand",
+    "color": [
+     0.56,
+     0.47,
+     0.6
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/q_unature/Rock_2.glb",
+     "count": 7
+    },
+    {
+     "url": "props/q_unature/Rock_6.glb",
+     "count": 5
+    },
+    {
+     "url": "props/kenney_nature/Rock_4.glb",
+     "count": 3
+    }
+   ],
+   "props": [
+    {
+     "url": "props/q_unature/Rock_7.glb",
+     "pos": [
+      5,
+      4
+     ]
+    },
+    {
+     "url": "props/q_unature/Rock_2.glb",
+     "pos": [
+      -5,
+      -3
+     ]
+    }
+   ],
+   "enemies": 1,
+   "enemy_type": "gorra",
+   "enemy_model": "/cloud-buzjpf9z8on0ylyzwny3/models/gorra.glb"
+  },
+  {
+   "cell": [
+    8,
+    1
+   ],
+   "ground": {
+    "preset": "sand",
+    "color": [
+     0.56,
+     0.47,
+     0.6
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/q_unature/Rock_6.glb",
+     "count": 6
+    },
+    {
+     "url": "props/q_unature/Rock_7.glb",
+     "count": 5
+    },
+    {
+     "kind": "rock",
+     "count": 4
+    }
+   ],
+   "props": [
+    {
+     "url": "props/q_unature/Rock_7.glb",
+     "pos": [
+      5,
+      4
+     ]
+    },
+    {
+     "url": "props/q_unature/Rock_2.glb",
+     "pos": [
+      -5,
+      -3
+     ]
+    }
+   ]
+  },
+  {
+   "cell": [
+    9,
+    1
+   ],
+   "ground": {
+    "preset": "sand",
+    "color": [
+     0.56,
+     0.47,
+     0.6
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/q_unature/Rock_2.glb",
+     "count": 7
+    },
+    {
+     "url": "props/q_unature/Rock_6.glb",
+     "count": 5
+    },
+    {
+     "url": "props/kenney_nature/Rock_4.glb",
+     "count": 3
+    }
+   ],
+   "props": [
+    {
+     "url": "props/q_unature/Rock_7.glb",
+     "pos": [
+      5,
+      4
+     ]
+    },
+    {
+     "url": "props/q_unature/Rock_2.glb",
+     "pos": [
+      -5,
+      -3
+     ]
+    }
+   ]
+  },
+  {
+   "cell": [
+    10,
+    1
+   ],
+   "ground": {
+    "preset": "sand",
+    "color": [
+     0.56,
+     0.47,
+     0.6
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/q_unature/Rock_6.glb",
+     "count": 6
+    },
+    {
+     "url": "props/q_unature/Rock_7.glb",
+     "count": 5
+    },
+    {
+     "kind": "rock",
+     "count": 4
+    }
+   ],
+   "props": [
+    {
+     "url": "props/q_unature/Rock_7.glb",
+     "pos": [
+      5,
+      4
+     ]
+    },
+    {
+     "url": "props/q_unature/Rock_2.glb",
+     "pos": [
+      -5,
+      -3
+     ]
+    }
+   ]
+  },
+  {
+   "cell": [
+    11,
+    1
+   ],
+   "ground": {
+    "preset": "sand",
+    "color": [
+     0.56,
+     0.47,
+     0.6
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/q_unature/Rock_2.glb",
+     "count": 7
+    },
+    {
+     "url": "props/q_unature/Rock_6.glb",
+     "count": 5
+    },
+    {
+     "url": "props/kenney_nature/Rock_4.glb",
+     "count": 3
+    }
+   ],
+   "props": [
+    {
+     "url": "props/q_unature/Rock_7.glb",
+     "pos": [
+      5,
+      4
+     ]
+    },
+    {
+     "url": "props/q_unature/Rock_2.glb",
+     "pos": [
+      -5,
+      -3
+     ]
+    }
+   ]
+  },
+  {
+   "cell": [
+    0,
+    2
+   ],
+   "ground": {
+    "preset": "sand",
+    "color": [
+     0.56,
+     0.47,
+     0.6
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/kenney_nature/Cattail_2.glb",
+     "count": 7
+    },
+    {
+     "url": "props/q_unature/PalmTree_2.glb",
+     "count": 3
+    },
+    {
+     "kind": "rock",
+     "count": 3
+    }
+   ],
+   "props": [
+    {
+     "url": "props/kenney_nature/Log_2.glb",
+     "pos": [
+      4,
+      -4
+     ]
+    },
+    {
+     "url": "props/kenney_nature/Shell_Layered.glb",
+     "pos": [
+      -4,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "cell": [
+    1,
+    2
+   ],
+   "ground": {
+    "preset": "sand",
+    "color": [
+     0.56,
+     0.47,
+     0.6
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/kenney_nature/Cattail_4.glb",
+     "count": 6
+    },
+    {
+     "url": "props/kenney_nature/Grass_Clump_2.glb",
+     "count": 8
+    },
+    {
+     "kind": "rock",
+     "count": 4
+    }
+   ],
+   "props": [
+    {
+     "url": "props/q_unature/PalmTree_2.glb",
+     "pos": [
+      -5,
+      5
+     ]
+    },
+    {
+     "url": "props/kenney_nature/Shell_Layered.glb",
+     "pos": [
+      5,
+      -2
+     ]
+    }
+   ]
+  },
+  {
+   "cell": [
+    2,
+    2
+   ],
+   "ground": {
+    "preset": "dirt",
+    "color": [
+     0.26,
+     0.18,
+     0.3
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/mega_nature/Mushroom_Laetiporus.glb",
+     "count": 10
+    },
+    {
+     "url": "props/kenney_nature/Mushroom_Red_Spotted.glb",
+     "count": 6
+    },
+    {
+     "url": "props/q_unature/Willow_Dead_2.glb",
+     "count": 4
+    },
+    {
+     "url": "props/q_unature/Plant_5.glb",
+     "count": 5
+    }
+   ],
+   "props": [
+    {
+     "url": "props/mega_nature/Plant_1_Big.glb",
+     "pos": [
+      5,
+      -4
+     ]
+    },
+    {
+     "url": "props/kenney_nature/Mushroom_Red_Spotted.glb",
+     "pos": [
+      -5,
+      3
+     ]
+    },
+    {
+     "url": "props/q_unature/TreeStump_Moss.glb",
+     "pos": [
+      3,
+      5
+     ]
+    }
+   ],
+   "enemies": 1,
+   "enemy_type": "veyth",
+   "enemy_model": "/cloud-buzjpf9z8on0ylyzwny3/models/veyth.glb"
+  },
+  {
+   "cell": [
+    3,
+    2
+   ],
+   "ground": {
+    "preset": "grass",
+    "color": [
+     0.13,
+     0.3,
+     0.27
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/q_unature/Willow_2.glb",
+     "count": 8
+    },
+    {
+     "url": "props/q_unature/Willow_3.glb",
+     "count": 8
+    },
+    {
+     "url": "props/q_unature/Plant_5.glb",
+     "count": 6
+    },
+    {
+     "url": "props/mega_nature/Mushroom_Laetiporus.glb",
+     "count": 5
+    },
+    {
+     "kind": "rock",
+     "count": 3
+    }
+   ],
+   "props": [
+    {
+     "url": "props/mega_nature/Plant_1_Big.glb",
+     "pos": [
+      -5,
+      -5
+     ]
+    },
+    {
+     "url": "props/mega_nature/Fern_1.glb",
+     "pos": [
+      4,
+      4
+     ]
+    }
+   ]
+  },
+  {
+   "cell": [
+    4,
+    2
+   ],
+   "ground": {
+    "preset": "grass",
+    "color": [
+     0.13,
+     0.3,
+     0.27
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/q_unature/Willow_1.glb",
+     "count": 9
+    },
+    {
+     "url": "props/q_unature/Willow_2.glb",
+     "count": 7
+    },
+    {
+     "url": "props/mega_nature/Mushroom_Laetiporus.glb",
+     "count": 6
+    },
+    {
+     "url": "props/q_unature/Rock_Moss_2.glb",
+     "count": 4
+    }
+   ],
+   "props": [
+    {
+     "url": "props/mega_nature/Plant_1_Big.glb",
+     "pos": [
+      5,
+      -4
+     ]
+    },
+    {
+     "url": "props/kenney_nature/Mushroom_Red_Spotted.glb",
+     "pos": [
+      -5,
+      3
+     ]
+    },
+    {
+     "url": "props/q_unature/TreeStump_Moss.glb",
+     "pos": [
+      3,
+      5
+     ]
+    }
+   ],
+   "enemies": 1,
+   "enemy_type": "veyth",
+   "enemy_model": "/cloud-buzjpf9z8on0ylyzwny3/models/veyth.glb"
+  },
+  {
+   "cell": [
+    5,
+    2
+   ],
+   "ground": {
+    "preset": "grass",
+    "color": [
+     0.13,
+     0.3,
+     0.27
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/kenney_nature/Grass_Clump_2.glb",
+     "count": 8
+    },
+    {
+     "url": "props/mega_nature/Grass_Wispy_Tall.glb",
+     "count": 6
+    },
+    {
+     "url": "props/mega_nature/Flower_3_Group.glb",
+     "count": 4
+    }
+   ],
+   "props": [
+    {
+     "url": "props/q_unature/Rock_Moss_2.glb",
+     "pos": [
+      5,
+      4
+     ]
+    },
+    {
+     "url": "props/mega_nature/Plant_1_Big.glb",
+     "pos": [
+      -5,
+      -4
+     ]
+    }
+   ],
+   "roads": [
+    {
+     "dir": "ns",
+     "width": 6
+    }
+   ],
+   "structures": [
+    {
+     "pos": [
+      5,
+      4
+     ],
+     "footprint": [
+      3,
+      3
+     ],
+     "height": 2.6,
+     "profile": "batter",
+     "cap": "dome",
+     "material": "timber"
+    }
+   ],
+   "enemies": 1,
+   "enemy_type": "veyth",
+   "enemy_model": "/cloud-buzjpf9z8on0ylyzwny3/models/veyth.glb"
+  },
+  {
+   "cell": [
+    6,
+    2
+   ],
+   "ground": {
+    "preset": "dirt",
+    "color": [
+     0.26,
+     0.18,
+     0.3
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/q_unature/Plant_5.glb",
+     "count": 5
+    },
+    {
+     "url": "props/mega_nature/Mushroom_Laetiporus.glb",
+     "count": 4
+    }
+   ],
+   "props": [
+    {
+     "url": "/cloud-buzjpf9z8on0ylyzwny3/models/camp_totem.glb",
+     "pos": [
+      0,
+      5
+     ]
+    },
+    {
+     "url": "props/kenney_nature/Campfire_Teepee.glb",
+     "pos": [
+      0,
+      -0.5
+     ]
+    },
+    {
+     "url": "props/kenney_nature/Tent_Leanto_2.glb",
+     "pos": [
+      5,
+      3
+     ]
+    },
+    {
+     "url": "props/mega_nature/Plant_1_Big.glb",
+     "pos": [
+      -6,
+      -2
+     ]
+    }
+   ],
+   "structures": [
+    {
+     "pos": [
+      -4,
+      3
+     ],
+     "footprint": [
+      3.5,
+      3.5
+     ],
+     "height": 3,
+     "profile": "batter",
+     "cap": "dome",
+     "material": "marble",
+     "sign_light": {
+      "color": [
+       0.25,
+       0.95,
+       0.85
+      ],
+      "energy": 2.5,
+      "range": 9
+     }
+    },
+    {
+     "pos": [
+      4,
+      -3
+     ],
+     "footprint": [
+      3,
+      3
+     ],
+     "height": 2.6,
+     "profile": "vertical",
+     "cap": "dome",
+     "material": "timber"
+    }
+   ],
+   "npc": {
+    "id": "elder_veyth",
+    "name": "Nhyx of the Nine Veils",
+    "pos": [
+     1,
+     2
+    ],
+    "persona": "Nhyx of the Nine Veils, elder of the veyth \u2014 cloaker aliens who bend light and walk unseen between the glowing willows; speaks in whispers that seem to come from three places at once; amused by the stranded hunter",
+    "lines": [
+     "Nhyx: You see my camp because we allow it, hunter. The veyth are the forest's held breath \u2014 strike what you cannot see."
+    ],
+    "model": "/cloud-buzjpf9z8on0ylyzwny3/models/trader.glb"
+   },
+   "chest": {
+    "pos": [
+     -5,
+     -4
+    ],
+    "contents": [
+     "veyth_shard"
+    ],
+    "gold": 30
+   }
+  },
+  {
+   "cell": [
+    7,
+    2
+   ],
+   "ground": {
+    "preset": "rock",
+    "color": [
+     0.24,
+     0.21,
+     0.33
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/q_unature/Rock_6.glb",
+     "count": 6
+    },
+    {
+     "url": "props/q_unature/Rock_7.glb",
+     "count": 5
+    },
+    {
+     "kind": "rock",
+     "count": 4
+    }
+   ],
+   "props": [
+    {
+     "url": "props/q_unature/Rock_7.glb",
+     "pos": [
+      5,
+      4
+     ]
+    },
+    {
+     "url": "props/q_unature/Rock_2.glb",
+     "pos": [
+      -5,
+      -3
+     ]
+    }
+   ]
+  },
+  {
+   "cell": [
+    8,
+    2
+   ],
+   "ground": {
+    "preset": "rock",
+    "color": [
+     0.24,
+     0.21,
+     0.33
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/q_unature/Rock_2.glb",
+     "count": 7
+    },
+    {
+     "url": "props/q_unature/Rock_6.glb",
+     "count": 5
+    },
+    {
+     "url": "props/kenney_nature/Rock_4.glb",
+     "count": 3
+    }
+   ],
+   "props": [
+    {
+     "url": "props/q_unature/Rock_7.glb",
+     "pos": [
+      5,
+      4
+     ]
+    },
+    {
+     "url": "props/q_unature/Rock_2.glb",
+     "pos": [
+      -5,
+      -3
+     ]
+    }
+   ],
+   "enemies": 2,
+   "enemy_type": "gorra",
+   "enemy_model": "/cloud-buzjpf9z8on0ylyzwny3/models/gorra.glb"
+  },
+  {
+   "cell": [
+    9,
+    2
+   ],
+   "ground": {
+    "preset": "rock",
+    "color": [
+     0.24,
+     0.21,
+     0.33
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/q_unature/Rock_6.glb",
+     "count": 6
+    },
+    {
+     "url": "props/q_unature/Rock_7.glb",
+     "count": 5
+    },
+    {
+     "kind": "rock",
+     "count": 4
+    }
+   ],
+   "props": [
+    {
+     "url": "props/q_unature/Rock_7.glb",
+     "pos": [
+      5,
+      4
+     ]
+    },
+    {
+     "url": "props/q_unature/Rock_2.glb",
+     "pos": [
+      -5,
+      -3
+     ]
+    }
+   ]
+  },
+  {
+   "cell": [
+    10,
+    2
+   ],
+   "ground": {
+    "preset": "dirt",
+    "color": [
+     0.26,
+     0.18,
+     0.3
+    ]
+   },
+   "scatter": [
+    {
+     "kind": "rock",
+     "count": 5
+    }
+   ],
+   "props": [
+    {
+     "url": "/cloud-buzjpf9z8on0ylyzwny3/models/camp_totem.glb",
+     "pos": [
+      0,
+      -6
+     ]
+    },
+    {
+     "url": "props/kenney_nature/Campfire_Teepee.glb",
+     "pos": [
+      1,
+      0.5
+     ]
+    },
+    {
+     "url": "props/kenney_nature/Timber_Stack_1.glb",
+     "pos": [
+      -4,
+      4
+     ]
+    },
+    {
+     "url": "props/q_unature/Rock_6.glb",
+     "pos": [
+      6,
+      -3
+     ]
+    }
+   ],
+   "structures": [
+    {
+     "pos": [
+      -4,
+      -3
+     ],
+     "footprint": [
+      4.5,
+      4.5
+     ],
+     "height": 3.5,
+     "profile": "batter",
+     "cap": "dome",
+     "material": "sandstone",
+     "sign_light": {
+      "color": [
+       0.25,
+       0.95,
+       0.85
+      ],
+      "energy": 2.5,
+      "range": 9
+     }
+    },
+    {
+     "pos": [
+      4,
+      3
+     ],
+     "footprint": [
+      3.5,
+      3.5
+     ],
+     "height": 2.8,
+     "profile": "vertical",
+     "cap": "dome",
+     "material": "stucco"
+    }
+   ],
+   "npc": {
+    "id": "elder_gorra",
+    "name": "Grondu Broke-Tusk",
+    "pos": [
+     -1,
+     2
+    ],
+    "persona": "Grondu Broke-Tusk, war-elder of the gorra \u2014 charger aliens of the dunes who shatter rock with their skull-plates; booming, blunt, honors head-on courage and despises ambush; lost his tusk to the broodmaw in the southeast spires",
+    "lines": [
+     "Grondu: HA! Small hunter, big nerve. A gorra charge cracks mesa stone \u2014 stand your ground once and I will call you kin."
+    ],
+    "model": "/cloud-buzjpf9z8on0ylyzwny3/models/trader.glb"
+   },
+   "chest": {
+    "pos": [
+     5,
+     -4
+    ],
+    "contents": [
+     "gorra_maul"
+    ],
+    "gold": 30
+   }
+  },
+  {
+   "cell": [
+    11,
+    2
+   ],
+   "ground": {
+    "preset": "dirt",
+    "color": [
+     0.26,
+     0.18,
+     0.3
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/q_unature/Rock_6.glb",
+     "count": 6
+    },
+    {
+     "url": "props/q_unature/Rock_7.glb",
+     "count": 5
+    },
+    {
+     "kind": "rock",
+     "count": 4
+    }
+   ],
+   "props": [
+    {
+     "url": "props/kenney_nature/Tent_Leanto_1.glb",
+     "pos": [
+      4,
+      3
+     ]
+    },
+    {
+     "url": "props/q_unature/Rock_2.glb",
+     "pos": [
+      -5,
+      -4
+     ]
+    }
+   ],
+   "enemies": 2,
+   "enemy_type": "gorra",
+   "enemy_model": "/cloud-buzjpf9z8on0ylyzwny3/models/gorra.glb"
+  },
+  {
+   "cell": [
+    0,
+    3
+   ],
+   "ground": {
+    "preset": "sand",
+    "color": [
+     0.56,
+     0.47,
+     0.6
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/kenney_nature/Cattail_4.glb",
+     "count": 6
+    },
+    {
+     "url": "props/kenney_nature/Grass_Clump_2.glb",
+     "count": 8
+    },
+    {
+     "kind": "rock",
+     "count": 4
+    }
+   ],
+   "props": [
+    {
+     "url": "props/q_unature/PalmTree_2.glb",
+     "pos": [
+      -5,
+      5
+     ]
+    },
+    {
+     "url": "props/kenney_nature/Shell_Layered.glb",
+     "pos": [
+      5,
+      -2
+     ]
+    }
+   ]
+  },
+  {
+   "cell": [
+    1,
+    3
+   ],
+   "ground": {
+    "preset": "sand",
+    "color": [
+     0.56,
+     0.47,
+     0.6
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/kenney_nature/Cattail_2.glb",
+     "count": 7
+    },
+    {
+     "url": "props/q_unature/PalmTree_2.glb",
+     "count": 3
+    },
+    {
+     "kind": "rock",
+     "count": 3
+    }
+   ],
+   "props": [
+    {
+     "url": "props/kenney_nature/Log_2.glb",
+     "pos": [
+      4,
+      -4
+     ]
+    },
+    {
+     "url": "props/kenney_nature/Shell_Layered.glb",
+     "pos": [
+      -4,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "cell": [
+    2,
+    3
+   ],
+   "ground": {
+    "preset": "grass",
+    "color": [
+     0.13,
+     0.3,
+     0.27
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/q_unature/Willow_2.glb",
+     "count": 8
+    },
+    {
+     "url": "props/q_unature/Willow_3.glb",
+     "count": 8
+    },
+    {
+     "url": "props/q_unature/Plant_5.glb",
+     "count": 6
+    },
+    {
+     "url": "props/mega_nature/Mushroom_Laetiporus.glb",
+     "count": 5
+    },
+    {
+     "kind": "rock",
+     "count": 3
+    }
+   ],
+   "props": [
+    {
+     "url": "props/mega_nature/Plant_1_Big.glb",
+     "pos": [
+      -5,
+      -5
+     ]
+    },
+    {
+     "url": "props/mega_nature/Fern_1.glb",
+     "pos": [
+      4,
+      4
+     ]
+    }
+   ]
+  },
+  {
+   "cell": [
+    3,
+    3
+   ],
+   "ground": {
+    "preset": "grass",
+    "color": [
+     0.13,
+     0.3,
+     0.27
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/q_unature/Willow_1.glb",
+     "count": 9
+    },
+    {
+     "url": "props/q_unature/Willow_2.glb",
+     "count": 7
+    },
+    {
+     "url": "props/mega_nature/Mushroom_Laetiporus.glb",
+     "count": 6
+    },
+    {
+     "url": "props/q_unature/Rock_Moss_2.glb",
+     "count": 4
+    }
+   ],
+   "props": [
+    {
+     "url": "props/mega_nature/Plant_1_Big.glb",
+     "pos": [
+      5,
+      -4
+     ]
+    },
+    {
+     "url": "props/kenney_nature/Mushroom_Red_Spotted.glb",
+     "pos": [
+      -5,
+      3
+     ]
+    },
+    {
+     "url": "props/q_unature/TreeStump_Moss.glb",
+     "pos": [
+      3,
+      5
+     ]
+    }
+   ]
+  },
+  {
+   "cell": [
+    4,
+    3
+   ],
+   "ground": {
+    "preset": "grass",
+    "color": [
+     0.13,
+     0.3,
+     0.27
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/q_unature/Willow_2.glb",
+     "count": 8
+    },
+    {
+     "url": "props/q_unature/Willow_3.glb",
+     "count": 8
+    },
+    {
+     "url": "props/q_unature/Plant_5.glb",
+     "count": 6
+    },
+    {
+     "url": "props/mega_nature/Mushroom_Laetiporus.glb",
+     "count": 5
+    },
+    {
+     "kind": "rock",
+     "count": 3
+    }
+   ],
+   "props": [
+    {
+     "url": "props/mega_nature/Plant_1_Big.glb",
+     "pos": [
+      -5,
+      -5
+     ]
+    },
+    {
+     "url": "props/mega_nature/Fern_1.glb",
+     "pos": [
+      4,
+      4
+     ]
+    }
+   ]
+  },
+  {
+   "cell": [
+    5,
+    3
+   ],
+   "ground": {
+    "preset": "grass",
+    "color": [
+     0.13,
+     0.3,
+     0.27
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/kenney_nature/Grass_Clump_2.glb",
+     "count": 8
+    },
+    {
+     "url": "props/mega_nature/Grass_Wispy_Tall.glb",
+     "count": 6
+    },
+    {
+     "url": "props/mega_nature/Flower_3_Group.glb",
+     "count": 4
+    }
+   ],
+   "props": [
+    {
+     "url": "props/q_unature/Rock_Moss_2.glb",
+     "pos": [
+      5,
+      4
+     ]
+    },
+    {
+     "url": "props/mega_nature/Plant_1_Big.glb",
+     "pos": [
+      -5,
+      -4
+     ]
+    }
+   ],
+   "roads": [
+    {
+     "dir": "ns",
+     "width": 6
+    }
+   ]
+  },
+  {
+   "cell": [
+    6,
+    3
+   ],
+   "ground": {
+    "preset": "grass",
+    "color": [
+     0.13,
+     0.3,
+     0.27
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/q_unature/Willow_2.glb",
+     "count": 8
+    },
+    {
+     "url": "props/q_unature/Willow_3.glb",
+     "count": 8
+    },
+    {
+     "url": "props/q_unature/Plant_5.glb",
+     "count": 6
+    },
+    {
+     "url": "props/mega_nature/Mushroom_Laetiporus.glb",
+     "count": 5
+    },
+    {
+     "kind": "rock",
+     "count": 3
+    }
+   ],
+   "props": [
+    {
+     "url": "props/mega_nature/Plant_1_Big.glb",
+     "pos": [
+      -5,
+      -5
+     ]
+    },
+    {
+     "url": "props/mega_nature/Fern_1.glb",
+     "pos": [
+      4,
+      4
+     ]
+    }
+   ]
+  },
+  {
+   "cell": [
+    7,
+    3
+   ],
+   "ground": {
+    "preset": "rock",
+    "color": [
+     0.24,
+     0.21,
+     0.33
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/q_unature/Rock_2.glb",
+     "count": 7
+    },
+    {
+     "url": "props/q_unature/Rock_6.glb",
+     "count": 5
+    },
+    {
+     "url": "props/kenney_nature/Rock_4.glb",
+     "count": 3
+    }
+   ],
+   "props": [
+    {
+     "url": "props/q_unature/Rock_7.glb",
+     "pos": [
+      5,
+      4
+     ]
+    },
+    {
+     "url": "props/q_unature/Rock_2.glb",
+     "pos": [
+      -5,
+      -3
+     ]
+    }
+   ]
+  },
+  {
+   "cell": [
+    8,
+    3
+   ],
+   "ground": {
+    "preset": "rock",
+    "color": [
+     0.24,
+     0.21,
+     0.33
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/q_unature/Rock_6.glb",
+     "count": 6
+    },
+    {
+     "url": "props/q_unature/Rock_7.glb",
+     "count": 5
+    },
+    {
+     "kind": "rock",
+     "count": 4
+    }
+   ],
+   "props": [
+    {
+     "url": "props/q_unature/Rock_7.glb",
+     "pos": [
+      5,
+      4
+     ]
+    },
+    {
+     "url": "props/q_unature/Rock_2.glb",
+     "pos": [
+      -5,
+      -3
+     ]
+    }
+   ]
+  },
+  {
+   "cell": [
+    9,
+    3
+   ],
+   "ground": {
+    "preset": "rock",
+    "color": [
+     0.24,
+     0.21,
+     0.33
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/q_unature/Rock_2.glb",
+     "count": 7
+    },
+    {
+     "url": "props/q_unature/Rock_6.glb",
+     "count": 5
+    },
+    {
+     "url": "props/kenney_nature/Rock_4.glb",
+     "count": 3
+    }
+   ],
+   "props": [
+    {
+     "url": "props/q_unature/Rock_7.glb",
+     "pos": [
+      5,
+      4
+     ]
+    },
+    {
+     "url": "props/q_unature/Rock_2.glb",
+     "pos": [
+      -5,
+      -3
+     ]
+    }
+   ]
+  },
+  {
+   "cell": [
+    10,
+    3
+   ],
+   "ground": {
+    "preset": "dirt",
+    "color": [
+     0.26,
+     0.18,
+     0.3
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/kenney_nature/Grass_Clump_2.glb",
+     "count": 8
+    },
+    {
+     "url": "props/mega_nature/Grass_Wispy_Tall.glb",
+     "count": 6
+    },
+    {
+     "url": "props/mega_nature/Flower_3_Group.glb",
+     "count": 4
+    }
+   ],
+   "props": [
+    {
+     "url": "props/kenney_nature/Tent_Leanto_2.glb",
+     "pos": [
+      5,
+      3
+     ]
+    },
+    {
+     "url": "props/kenney_nature/Tent_Leanto_1.glb",
+     "pos": [
+      -5,
+      2
+     ]
+    },
+    {
+     "url": "props/kenney_nature/Timber_Stack_1.glb",
+     "pos": [
+      5,
+      -4
+     ]
+    }
+   ],
+   "roads": [
+    {
+     "dir": "ns",
+     "width": 6
+    }
+   ]
+  },
+  {
+   "cell": [
+    11,
+    3
+   ],
+   "ground": {
+    "preset": "dirt",
+    "color": [
+     0.26,
+     0.18,
+     0.3
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/q_unature/Rock_2.glb",
+     "count": 7
+    },
+    {
+     "url": "props/q_unature/Rock_6.glb",
+     "count": 5
+    },
+    {
+     "url": "props/kenney_nature/Rock_4.glb",
+     "count": 3
+    }
+   ],
+   "props": [
+    {
+     "url": "props/q_unature/Rock_7.glb",
+     "pos": [
+      5,
+      4
+     ]
+    },
+    {
+     "url": "props/q_unature/Rock_2.glb",
+     "pos": [
+      -5,
+      -3
+     ]
+    }
+   ],
+   "structures": [
+    {
+     "pos": [
+      4,
+      4
+     ],
+     "footprint": [
+      3,
+      3
+     ],
+     "height": 2.6,
+     "profile": "batter",
+     "cap": "dome",
+     "material": "timber"
+    }
+   ],
+   "enemies": 2,
+   "enemy_type": "gorra",
+   "enemy_model": "/cloud-buzjpf9z8on0ylyzwny3/models/gorra.glb"
+  },
+  {
+   "cell": [
+    0,
+    4
+   ],
+   "ground": {
+    "preset": "sand",
+    "color": [
+     0.56,
+     0.47,
+     0.6
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/q_unature/Lilypad.glb",
+     "count": 5
+    },
+    {
+     "kind": "rock",
+     "count": 3
+    }
+   ]
+  },
+  {
+   "cell": [
+    1,
+    4
+   ],
+   "ground": {
+    "preset": "sand",
+    "color": [
+     0.56,
+     0.47,
+     0.6
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/kenney_nature/Cattail_4.glb",
+     "count": 6
+    },
+    {
+     "url": "props/kenney_nature/Grass_Clump_2.glb",
+     "count": 8
+    },
+    {
+     "kind": "rock",
+     "count": 4
+    }
+   ],
+   "props": [
+    {
+     "url": "props/q_unature/PalmTree_2.glb",
+     "pos": [
+      -5,
+      5
+     ]
+    },
+    {
+     "url": "props/kenney_nature/Shell_Layered.glb",
+     "pos": [
+      5,
+      -2
+     ]
+    }
+   ]
+  },
+  {
+   "cell": [
+    2,
+    4
+   ],
+   "ground": {
+    "preset": "grass",
+    "color": [
+     0.13,
+     0.3,
+     0.27
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/q_unature/BirchTree_1.glb",
+     "count": 3
+    },
+    {
+     "url": "props/kenney_nature/Grass_Clump_2.glb",
+     "count": 10
+    },
+    {
+     "url": "props/mega_nature/Flower_3_Group.glb",
+     "count": 6
+    },
+    {
+     "url": "props/q_unature/Plant_2.glb",
+     "count": 4
+    },
+    {
+     "kind": "rock",
+     "count": 3
+    }
+   ],
+   "props": [
+    {
+     "url": "props/mega_nature/Plant_1_Big.glb",
+     "pos": [
+      6,
+      5
+     ]
+    },
+    {
+     "url": "props/q_unature/Rock_Moss_2.glb",
+     "pos": [
+      -6,
+      -5
+     ]
+    }
+   ],
+   "enemies": 1,
+   "enemy_type": "skarn",
+   "enemy_model": "/cloud-buzjpf9z8on0ylyzwny3/models/skarn.glb"
+  },
+  {
+   "cell": [
+    3,
+    4
+   ],
+   "ground": {
+    "preset": "grass",
+    "color": [
+     0.13,
+     0.3,
+     0.27
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/q_unature/BirchTree_1.glb",
+     "count": 3
+    },
+    {
+     "url": "props/kenney_nature/Grass_Clump_2.glb",
+     "count": 10
+    },
+    {
+     "url": "props/mega_nature/Flower_3_Group.glb",
+     "count": 6
+    },
+    {
+     "url": "props/q_unature/Plant_2.glb",
+     "count": 4
+    },
+    {
+     "kind": "rock",
+     "count": 3
+    }
+   ],
+   "props": [
+    {
+     "url": "props/mega_nature/Plant_1_Big.glb",
+     "pos": [
+      6,
+      5
+     ]
+    },
+    {
+     "url": "props/q_unature/Rock_Moss_2.glb",
+     "pos": [
+      -6,
+      -5
+     ]
+    }
+   ]
+  },
+  {
+   "cell": [
+    4,
+    4
+   ],
+   "ground": {
+    "preset": "grass",
+    "color": [
+     0.13,
+     0.3,
+     0.27
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/q_unature/BirchTree_1.glb",
+     "count": 3
+    },
+    {
+     "url": "props/kenney_nature/Grass_Clump_2.glb",
+     "count": 10
+    },
+    {
+     "url": "props/mega_nature/Flower_3_Group.glb",
+     "count": 6
+    },
+    {
+     "url": "props/q_unature/Plant_2.glb",
+     "count": 4
+    },
+    {
+     "kind": "rock",
+     "count": 3
+    }
+   ],
+   "props": [
+    {
+     "url": "props/mega_nature/Plant_1_Big.glb",
+     "pos": [
+      6,
+      5
+     ]
+    },
+    {
+     "url": "props/q_unature/Rock_Moss_2.glb",
+     "pos": [
+      -6,
+      -5
+     ]
+    }
+   ]
+  },
+  {
+   "cell": [
+    5,
+    4
+   ],
+   "roads": [
+    {
+     "dir": "ns",
+     "width": 6
+    }
+   ],
+   "scatter": [
+    {
+     "url": "props/kenney_nature/Grass_Clump_2.glb",
+     "count": 8
+    },
+    {
+     "url": "props/mega_nature/Grass_Wispy_Tall.glb",
+     "count": 6
+    },
+    {
+     "url": "props/mega_nature/Flower_3_Group.glb",
+     "count": 4
+    }
+   ],
+   "props": [
+    {
+     "url": "props/mod_temple/Prop_Rubble_1.glb",
+     "pos": [
+      5.5,
+      5
+     ]
+    },
+    {
+     "url": "props/mod_temple/Prop_Flag_Eclipse.glb",
+     "pos": [
+      -5.5,
+      -5
+     ]
+    }
+   ],
+   "ground": {
+    "preset": "stone",
+    "color": [
+     0.3,
+     0.28,
+     0.38
+    ]
+   },
+   "structures": [
+    {
+     "pos": [
+      -4.5,
+      0
+     ],
+     "footprint": [
+      3,
+      5
+     ],
+     "height": 6,
+     "profile": "batter",
+     "material": "sandstone"
+    },
+    {
+     "pos": [
+      4.5,
+      0
+     ],
+     "footprint": [
+      3,
+      5
+     ],
+     "height": 6,
+     "profile": "batter",
+     "material": "sandstone"
+    }
+   ]
+  },
+  {
+   "cell": [
+    6,
+    4
+   ],
+   "ground": {
+    "preset": "stone",
+    "color": [
+     0.3,
+     0.28,
+     0.38
+    ]
+   },
+   "structures": [
+    {
+     "pos": [
+      1,
+      -2
+     ],
+     "footprint": [
+      9,
+      9
+     ],
+     "height": 7,
+     "profile": "pyramid",
+     "material": "sandstone"
+    }
+   ],
+   "scatter": [
+    {
+     "url": "props/mega_nature/Grass_Wispy_Tall.glb",
+     "count": 6
+    },
+    {
+     "kind": "rock",
+     "count": 3
+    }
+   ],
+   "props": [
+    {
+     "url": "props/mod_temple/Prop_Rubble_2.glb",
+     "pos": [
+      -5,
+      4
+     ]
+    },
+    {
+     "url": "props/mod_temple/Prop_Vase_2.glb",
+     "pos": [
+      -5,
+      0
+     ]
+    }
+   ]
+  },
+  {
+   "cell": [
+    7,
+    4
+   ],
+   "ground": {
+    "preset": "stone",
+    "color": [
+     0.3,
+     0.28,
+     0.38
+    ]
+   },
+   "rows": [
+    {
+     "part": {
+      "url": "props/mod_temple/Pillar_Large_Base.glb"
+     },
+     "from": [
+      -5,
+      -6
+     ],
+     "to": [
+      -5,
+      6
+     ],
+     "spacing": 3
+    },
+    {
+     "part": {
+      "url": "props/mod_temple/Pillar_Large_Base.glb"
+     },
+     "from": [
+      5,
+      -6
+     ],
+     "to": [
+      5,
+      6
+     ],
+     "spacing": 3
+    }
+   ],
+   "scatter": [
+    {
+     "url": "props/mega_nature/Grass_Wispy_Tall.glb",
+     "count": 6
+    },
+    {
+     "kind": "rock",
+     "count": 3
+    }
+   ],
+   "props": [
+    {
+     "url": "props/mod_temple/Prop_Rubble_1.glb",
+     "pos": [
+      0,
+      -6
+     ]
+    },
+    {
+     "url": "props/mod_temple/Prop_Flag_Eclipse.glb",
+     "pos": [
+      0,
+      6
+     ]
+    }
+   ],
+   "enemies": 2,
+   "enemy_type": "skarn",
+   "enemy_model": "/cloud-buzjpf9z8on0ylyzwny3/models/skarn.glb"
+  },
+  {
+   "cell": [
+    8,
+    4
+   ],
+   "ground": {
+    "preset": "dirt",
+    "color": [
+     0.26,
+     0.18,
+     0.3
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/q_unature/Bush_1.glb",
+     "count": 5
+    },
+    {
+     "url": "props/q_unature/BushBerries_1.glb",
+     "count": 3
+    },
+    {
+     "url": "props/mega_nature/DeadTree_1.glb",
+     "count": 2
+    },
+    {
+     "url": "props/mega_nature/Grass_Wispy_Tall.glb",
+     "count": 8
+    },
+    {
+     "kind": "rock",
+     "count": 4
+    }
+   ],
+   "props": [
+    {
+     "url": "props/mega_nature/DeadTree_1.glb",
+     "pos": [
+      5,
+      -5
+     ]
+    },
+    {
+     "url": "props/q_unature/Rock_6.glb",
+     "pos": [
+      -5,
+      4
+     ]
+    }
+   ],
+   "enemies": 1,
+   "enemy_type": "skarn",
+   "enemy_model": "/cloud-buzjpf9z8on0ylyzwny3/models/skarn.glb"
+  },
+  {
+   "cell": [
+    9,
+    4
+   ],
+   "ground": {
+    "preset": "rock",
+    "color": [
+     0.24,
+     0.21,
+     0.33
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/q_unature/Bush_1.glb",
+     "count": 5
+    },
+    {
+     "url": "props/q_unature/BushBerries_1.glb",
+     "count": 3
+    },
+    {
+     "url": "props/mega_nature/DeadTree_1.glb",
+     "count": 2
+    },
+    {
+     "url": "props/mega_nature/Grass_Wispy_Tall.glb",
+     "count": 8
+    },
+    {
+     "kind": "rock",
+     "count": 4
+    }
+   ],
+   "props": [
+    {
+     "url": "props/mega_nature/DeadTree_1.glb",
+     "pos": [
+      5,
+      -5
+     ]
+    },
+    {
+     "url": "props/q_unature/Rock_6.glb",
+     "pos": [
+      -5,
+      4
+     ]
+    }
+   ]
+  },
+  {
+   "cell": [
+    10,
+    4
+   ],
+   "ground": {
+    "preset": "dirt",
+    "color": [
+     0.26,
+     0.18,
+     0.3
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/kenney_nature/Grass_Clump_2.glb",
+     "count": 8
+    },
+    {
+     "url": "props/mega_nature/Grass_Wispy_Tall.glb",
+     "count": 6
+    },
+    {
+     "url": "props/mega_nature/Flower_3_Group.glb",
+     "count": 4
+    }
+   ],
+   "props": [
+    {
+     "url": "props/q_unature/Rock_Moss_2.glb",
+     "pos": [
+      5,
+      4
+     ]
+    },
+    {
+     "url": "props/mega_nature/Plant_1_Big.glb",
+     "pos": [
+      -5,
+      -4
+     ]
+    }
+   ],
+   "roads": [
+    {
+     "dir": "ns",
+     "width": 6
+    }
+   ]
+  },
+  {
+   "cell": [
+    11,
+    4
+   ],
+   "ground": {
+    "preset": "rock",
+    "color": [
+     0.24,
+     0.21,
+     0.33
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/q_unature/Bush_1.glb",
+     "count": 5
+    },
+    {
+     "url": "props/q_unature/BushBerries_1.glb",
+     "count": 3
+    },
+    {
+     "url": "props/mega_nature/DeadTree_1.glb",
+     "count": 2
+    },
+    {
+     "url": "props/mega_nature/Grass_Wispy_Tall.glb",
+     "count": 8
+    },
+    {
+     "kind": "rock",
+     "count": 4
+    }
+   ],
+   "props": [
+    {
+     "url": "props/mega_nature/DeadTree_1.glb",
+     "pos": [
+      5,
+      -5
+     ]
+    },
+    {
+     "url": "props/q_unature/Rock_6.glb",
+     "pos": [
+      -5,
+      4
+     ]
+    }
+   ]
+  },
+  {
+   "cell": [
+    0,
+    5
+   ],
+   "ground": {
+    "preset": "sand",
+    "color": [
+     0.56,
+     0.47,
+     0.6
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/q_unature/Lilypad.glb",
+     "count": 5
+    },
+    {
+     "kind": "rock",
+     "count": 3
+    }
+   ]
+  },
+  {
+   "cell": [
+    1,
+    5
+   ],
+   "ground": {
+    "preset": "sand",
+    "color": [
+     0.56,
+     0.47,
+     0.6
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/kenney_nature/Cattail_2.glb",
+     "count": 7
+    },
+    {
+     "url": "props/q_unature/PalmTree_2.glb",
+     "count": 3
+    },
+    {
+     "kind": "rock",
+     "count": 3
+    }
+   ],
+   "props": [
+    {
+     "url": "props/kenney_nature/Log_2.glb",
+     "pos": [
+      4,
+      -4
+     ]
+    },
+    {
+     "url": "props/kenney_nature/Shell_Layered.glb",
+     "pos": [
+      -4,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "cell": [
+    2,
+    5
+   ],
+   "ground": {
+    "preset": "grass",
+    "color": [
+     0.13,
+     0.3,
+     0.27
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/q_unature/BirchTree_1.glb",
+     "count": 3
+    },
+    {
+     "url": "props/kenney_nature/Grass_Clump_2.glb",
+     "count": 10
+    },
+    {
+     "url": "props/mega_nature/Flower_3_Group.glb",
+     "count": 6
+    },
+    {
+     "url": "props/q_unature/Plant_2.glb",
+     "count": 4
+    },
+    {
+     "kind": "rock",
+     "count": 3
+    }
+   ],
+   "props": [
+    {
+     "url": "props/mega_nature/Plant_1_Big.glb",
+     "pos": [
+      6,
+      5
+     ]
+    },
+    {
+     "url": "props/q_unature/Rock_Moss_2.glb",
+     "pos": [
+      -6,
+      -5
+     ]
+    }
+   ]
+  },
+  {
+   "cell": [
+    3,
+    5
+   ],
+   "ground": {
+    "preset": "dirt",
+    "color": [
+     0.26,
+     0.18,
+     0.3
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/kenney_nature/Grass_Clump_2.glb",
+     "count": 8
+    },
+    {
+     "kind": "rock",
+     "count": 4
+    }
+   ],
+   "props": [
+    {
+     "url": "props/mega_nature/Plant_1_Big.glb",
+     "pos": [
+      6,
+      5
+     ]
+    },
+    {
+     "url": "props/q_unature/Rock_2.glb",
+     "pos": [
+      -6,
+      4
+     ]
+    }
+   ],
+   "landmark": {
+    "url": "/cloud-buzjpf9z8on0ylyzwny3/models/crashed_ship.glb",
+    "pos": [
+     0,
+     -2
+    ],
+    "collider": "box"
+   },
+   "chest": {
+    "pos": [
+     5.5,
+     5
+    ],
+    "gold": 35
+   }
+  },
+  {
+   "cell": [
+    4,
+    5
+   ],
+   "ground": {
+    "preset": "grass",
+    "color": [
+     0.13,
+     0.3,
+     0.27
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/q_unature/BirchTree_1.glb",
+     "count": 3
+    },
+    {
+     "url": "props/kenney_nature/Grass_Clump_2.glb",
+     "count": 10
+    },
+    {
+     "url": "props/mega_nature/Flower_3_Group.glb",
+     "count": 6
+    },
+    {
+     "url": "props/q_unature/Plant_2.glb",
+     "count": 4
+    },
+    {
+     "kind": "rock",
+     "count": 3
+    }
+   ],
+   "props": [
+    {
+     "url": "props/mega_nature/Plant_1_Big.glb",
+     "pos": [
+      6,
+      5
+     ]
+    },
+    {
+     "url": "props/q_unature/Rock_Moss_2.glb",
+     "pos": [
+      -6,
+      -5
+     ]
+    }
+   ]
+  },
+  {
+   "cell": [
+    5,
+    5
+   ],
+   "roads": [
+    {
+     "dir": "ns",
+     "width": 6
+    }
+   ],
+   "scatter": [
+    {
+     "url": "props/kenney_nature/Grass_Clump_2.glb",
+     "count": 8
+    },
+    {
+     "url": "props/mega_nature/Grass_Wispy_Tall.glb",
+     "count": 6
+    },
+    {
+     "url": "props/mega_nature/Flower_3_Group.glb",
+     "count": 4
+    }
+   ],
+   "props": [
+    {
+     "url": "props/mod_temple/Prop_Vase_2.glb",
+     "pos": [
+      5,
+      3
+     ]
+    },
+    {
+     "url": "props/mod_temple/Prop_Rubble_1.glb",
+     "pos": [
+      5.5,
+      -6
+     ]
+    },
+    {
+     "url": "props/mod_temple/Prop_Flag_Eclipse.glb",
+     "pos": [
+      5,
+      6
+     ]
+    }
+   ],
+   "ground": {
+    "preset": "stone",
+    "color": [
+     0.3,
+     0.28,
+     0.38
+    ]
+   },
+   "structures": [
+    {
+     "pos": [
+      -5,
+      -3
+     ],
+     "footprint": [
+      1.5,
+      1.5
+     ],
+     "height": 5,
+     "profile": "taper",
+     "batter": 0.2,
+     "cap": "pyramidion",
+     "material": "sandstone"
+    },
+    {
+     "pos": [
+      -5,
+      3
+     ],
+     "footprint": [
+      1.5,
+      1.5
+     ],
+     "height": 5,
+     "profile": "taper",
+     "batter": 0.2,
+     "cap": "pyramidion",
+     "material": "sandstone"
+    }
+   ],
+   "chest": {
+    "pos": [
+     5,
+     -4
+    ],
+    "contents": [
+     "potion",
+     "potion"
+    ],
+    "gold": 25
+   }
+  },
+  {
+   "cell": [
+    6,
+    5
+   ],
+   "ground": {
+    "preset": "stone",
+    "color": [
+     0.3,
+     0.28,
+     0.38
+    ]
+   },
+   "structures": [
+    {
+     "pos": [
+      0,
+      -1
+     ],
+     "footprint": [
+      11,
+      11
+     ],
+     "height": 9,
+     "profile": "ziggurat",
+     "steps": 5,
+     "material": "sandstone"
+    }
+   ],
+   "props": [
+    {
+     "url": "props/mod_temple/Pillar_Large_Base.glb",
+     "pos": [
+      -4,
+      6.5
+     ]
+    },
+    {
+     "url": "props/mod_temple/Pillar_Large_Base.glb",
+     "pos": [
+      4,
+      6.5
+     ]
+    },
+    {
+     "url": "props/mod_temple/Prop_Vase_2.glb",
+     "pos": [
+      6.5,
+      3
+     ]
+    }
+   ],
+   "scatter": [
+    {
+     "url": "props/mega_nature/Grass_Wispy_Tall.glb",
+     "count": 5
+    }
+   ],
+   "chest": {
+    "pos": [
+     0,
+     6
+    ],
+    "contents": [
+     "trophy_relic"
+    ],
+    "gold": 40
+   }
+  },
+  {
+   "cell": [
+    7,
+    5
+   ],
+   "ground": {
+    "preset": "stone",
+    "color": [
+     0.3,
+     0.28,
+     0.38
+    ]
+   },
+   "structures": [
+    {
+     "pos": [
+      0,
+      -1
+     ],
+     "footprint": [
+      8,
+      7
+     ],
+     "floors": 1,
+     "profile": "batter",
+     "cap": "flat",
+     "material": "sandstone",
+     "interior": {
+      "door": "arch",
+      "door_face": "s",
+      "lit": true
+     }
+    }
+   ],
+   "scatter": [
+    {
+     "url": "props/mega_nature/Grass_Wispy_Tall.glb",
+     "count": 5
+    },
+    {
+     "kind": "rock",
+     "count": 2
+    }
+   ],
+   "props": [
+    {
+     "url": "props/mod_temple/Prop_Rubble_2.glb",
+     "pos": [
+      6,
+      5
+     ]
+    },
+    {
+     "url": "props/mod_temple/Prop_Vase_2.glb",
+     "pos": [
+      -6,
+      4
+     ]
+    }
+   ],
+   "chest": {
+    "pos": [
+     0,
+     -1
+    ],
+    "contents": [
+     "trophy_idol"
+    ],
+    "gold": 45
+   }
+  },
+  {
+   "cell": [
+    8,
+    5
+   ],
+   "ground": {
+    "preset": "rock",
+    "color": [
+     0.24,
+     0.21,
+     0.33
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/q_unature/Bush_1.glb",
+     "count": 5
+    },
+    {
+     "url": "props/q_unature/BushBerries_1.glb",
+     "count": 3
+    },
+    {
+     "url": "props/mega_nature/DeadTree_1.glb",
+     "count": 2
+    },
+    {
+     "url": "props/mega_nature/Grass_Wispy_Tall.glb",
+     "count": 8
+    },
+    {
+     "kind": "rock",
+     "count": 4
+    }
+   ],
+   "props": [
+    {
+     "url": "props/mega_nature/DeadTree_1.glb",
+     "pos": [
+      5,
+      -5
+     ]
+    },
+    {
+     "url": "props/q_unature/Rock_6.glb",
+     "pos": [
+      -5,
+      4
+     ]
+    }
+   ]
+  },
+  {
+   "cell": [
+    9,
+    5
+   ],
+   "ground": {
+    "preset": "dirt",
+    "color": [
+     0.26,
+     0.18,
+     0.3
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/q_unature/Bush_1.glb",
+     "count": 5
+    },
+    {
+     "url": "props/q_unature/BushBerries_1.glb",
+     "count": 3
+    },
+    {
+     "url": "props/mega_nature/DeadTree_1.glb",
+     "count": 2
+    },
+    {
+     "url": "props/mega_nature/Grass_Wispy_Tall.glb",
+     "count": 8
+    },
+    {
+     "kind": "rock",
+     "count": 4
+    }
+   ],
+   "props": [
+    {
+     "url": "props/mega_nature/DeadTree_1.glb",
+     "pos": [
+      5,
+      -5
+     ]
+    },
+    {
+     "url": "props/q_unature/Rock_6.glb",
+     "pos": [
+      -5,
+      4
+     ]
+    }
+   ],
+   "enemies": 1,
+   "enemy_type": "gorra",
+   "enemy_model": "/cloud-buzjpf9z8on0ylyzwny3/models/gorra.glb"
+  },
+  {
+   "cell": [
+    10,
+    5
+   ],
+   "ground": {
+    "preset": "rock",
+    "color": [
+     0.24,
+     0.21,
+     0.33
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/kenney_nature/Grass_Clump_2.glb",
+     "count": 8
+    },
+    {
+     "url": "props/mega_nature/Grass_Wispy_Tall.glb",
+     "count": 6
+    },
+    {
+     "url": "props/mega_nature/Flower_3_Group.glb",
+     "count": 4
+    }
+   ],
+   "props": [
+    {
+     "url": "props/q_unature/Rock_Moss_2.glb",
+     "pos": [
+      5,
+      4
+     ]
+    },
+    {
+     "url": "props/mega_nature/Plant_1_Big.glb",
+     "pos": [
+      -5,
+      -4
+     ]
+    }
+   ],
+   "roads": [
+    {
+     "dir": "ns",
+     "width": 6
+    }
+   ]
+  },
+  {
+   "cell": [
+    11,
+    5
+   ],
+   "ground": {
+    "preset": "dirt",
+    "color": [
+     0.26,
+     0.18,
+     0.3
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/q_unature/Bush_1.glb",
+     "count": 5
+    },
+    {
+     "url": "props/q_unature/BushBerries_1.glb",
+     "count": 3
+    },
+    {
+     "url": "props/mega_nature/DeadTree_1.glb",
+     "count": 2
+    },
+    {
+     "url": "props/mega_nature/Grass_Wispy_Tall.glb",
+     "count": 8
+    },
+    {
+     "kind": "rock",
+     "count": 4
+    }
+   ],
+   "props": [
+    {
+     "url": "props/mega_nature/DeadTree_1.glb",
+     "pos": [
+      5,
+      -5
+     ]
+    },
+    {
+     "url": "props/q_unature/Rock_6.glb",
+     "pos": [
+      -5,
+      4
+     ]
+    }
+   ]
+  },
+  {
+   "cell": [
+    0,
+    6
+   ],
+   "ground": {
+    "preset": "sand",
+    "color": [
+     0.56,
+     0.47,
+     0.6
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/q_unature/Lilypad.glb",
+     "count": 5
+    },
+    {
+     "kind": "rock",
+     "count": 3
+    }
+   ]
+  },
+  {
+   "cell": [
+    1,
+    6
+   ],
+   "ground": {
+    "preset": "sand",
+    "color": [
+     0.56,
+     0.47,
+     0.6
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/kenney_nature/Cattail_4.glb",
+     "count": 6
+    },
+    {
+     "url": "props/kenney_nature/Grass_Clump_2.glb",
+     "count": 8
+    },
+    {
+     "kind": "rock",
+     "count": 4
+    }
+   ],
+   "props": [
+    {
+     "url": "props/q_unature/PalmTree_2.glb",
+     "pos": [
+      -5,
+      5
+     ]
+    },
+    {
+     "url": "props/kenney_nature/Shell_Layered.glb",
+     "pos": [
+      5,
+      -2
+     ]
+    }
+   ]
+  },
+  {
+   "cell": [
+    2,
+    6
+   ],
+   "ground": {
+    "preset": "grass",
+    "color": [
+     0.13,
+     0.3,
+     0.27
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/kenney_nature/Grass_Clump_2.glb",
+     "count": 8
+    },
+    {
+     "url": "props/mega_nature/Grass_Wispy_Tall.glb",
+     "count": 6
+    },
+    {
+     "url": "props/mega_nature/Flower_3_Group.glb",
+     "count": 4
+    }
+   ],
+   "props": [
+    {
+     "url": "props/q_unature/Rock_Moss_2.glb",
+     "pos": [
+      4,
+      5
+     ]
+    },
+    {
+     "url": "props/mega_nature/Plant_1_Big.glb",
+     "pos": [
+      -4,
+      -5
+     ]
+    }
+   ],
+   "roads": [
+    {
+     "dir": "ew",
+     "width": 7
+    }
+   ]
+  },
+  {
+   "cell": [
+    3,
+    6
+   ],
+   "ground": {
+    "preset": "grass",
+    "color": [
+     0.13,
+     0.3,
+     0.27
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/kenney_nature/Grass_Clump_2.glb",
+     "count": 8
+    },
+    {
+     "url": "props/mega_nature/Grass_Wispy_Tall.glb",
+     "count": 6
+    },
+    {
+     "url": "props/mega_nature/Flower_3_Group.glb",
+     "count": 4
+    }
+   ],
+   "props": [
+    {
+     "url": "props/q_unature/Rock_Moss_2.glb",
+     "pos": [
+      5,
+      5
+     ]
+    },
+    {
+     "url": "props/mega_nature/Plant_1_Big.glb",
+     "pos": [
+      -5,
+      -5
+     ]
+    }
+   ],
+   "roads": [
+    {
+     "dir": "x",
+     "width": 7
+    }
+   ]
+  },
+  {
+   "cell": [
+    4,
+    6
+   ],
+   "ground": {
+    "preset": "grass",
+    "color": [
+     0.13,
+     0.3,
+     0.27
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/kenney_nature/Grass_Clump_2.glb",
+     "count": 8
+    },
+    {
+     "url": "props/mega_nature/Grass_Wispy_Tall.glb",
+     "count": 6
+    },
+    {
+     "url": "props/mega_nature/Flower_3_Group.glb",
+     "count": 4
+    }
+   ],
+   "props": [
+    {
+     "url": "props/q_unature/Rock_Moss_2.glb",
+     "pos": [
+      4,
+      5
+     ]
+    },
+    {
+     "url": "props/mega_nature/Plant_1_Big.glb",
+     "pos": [
+      -4,
+      -5
+     ]
+    }
+   ],
+   "roads": [
+    {
+     "dir": "ew",
+     "width": 7
+    }
+   ]
+  },
+  {
+   "cell": [
+    5,
+    6
+   ],
+   "roads": [
+    {
+     "dir": "x",
+     "width": 7
+    }
+   ],
+   "scatter": [
+    {
+     "url": "props/mega_nature/Grass_Wispy_Tall.glb",
+     "count": 6
+    },
+    {
+     "url": "props/kenney_nature/Grass_Clump_2.glb",
+     "count": 5
+    }
+   ],
+   "props": [
+    {
+     "url": "props/mod_temple/Prop_Rubble_1.glb",
+     "pos": [
+      5,
+      5
+     ]
+    },
+    {
+     "url": "props/mod_temple/Prop_Vase_2.glb",
+     "pos": [
+      -5,
+      -5
+     ]
+    },
+    {
+     "url": "props/mod_temple/Prop_Flag_Eclipse.glb",
+     "pos": [
+      5,
+      -5
+     ]
+    }
+   ],
+   "ground": {
+    "preset": "stone",
+    "color": [
+     0.3,
+     0.28,
+     0.38
+    ]
+   }
+  },
+  {
+   "cell": [
+    6,
+    6
+   ],
+   "roads": [
+    {
+     "dir": "ew",
+     "width": 7
+    }
+   ],
+   "scatter": [
+    {
+     "url": "props/kenney_nature/Grass_Clump_2.glb",
+     "count": 8
+    },
+    {
+     "url": "props/mega_nature/Grass_Wispy_Tall.glb",
+     "count": 6
+    },
+    {
+     "url": "props/mega_nature/Flower_3_Group.glb",
+     "count": 4
+    }
+   ],
+   "props": [
+    {
+     "url": "props/mod_temple/Pillar_Large_Base.glb",
+     "pos": [
+      -5,
+      5
+     ]
+    },
+    {
+     "url": "props/mod_temple/Pillar_Large_Base.glb",
+     "pos": [
+      5,
+      5
+     ]
+    }
+   ],
+   "ground": {
+    "preset": "stone",
+    "color": [
+     0.3,
+     0.28,
+     0.38
+    ]
+   },
+   "landmark": {
+    "url": "/cloud-buzjpf9z8on0ylyzwny3/models/ruin_gate.glb",
+    "pos": [
+     0,
+     0
+    ],
+    "collider": "mesh"
+   }
+  },
+  {
+   "cell": [
+    7,
+    6
+   ],
+   "roads": [
+    {
+     "dir": "ew",
+     "width": 7
+    }
+   ],
+   "scatter": [
+    {
+     "url": "props/kenney_nature/Grass_Clump_2.glb",
+     "count": 8
+    },
+    {
+     "url": "props/mega_nature/Grass_Wispy_Tall.glb",
+     "count": 6
+    },
+    {
+     "url": "props/mega_nature/Flower_3_Group.glb",
+     "count": 4
+    }
+   ],
+   "props": [
+    {
+     "url": "props/mod_temple/Prop_Rubble_2.glb",
+     "pos": [
+      6,
+      -6
+     ]
+    }
+   ],
+   "ground": {
+    "preset": "stone",
+    "color": [
+     0.3,
+     0.28,
+     0.38
+    ]
+   },
+   "structures": [
+    {
+     "pos": [
+      0,
+      5
+     ],
+     "footprint": [
+      10,
+      2
+     ],
+     "height": 2.5,
+     "profile": "batter",
+     "material": "sandstone"
+    },
+    {
+     "pos": [
+      -1,
+      -5
+     ],
+     "footprint": [
+      8,
+      2
+     ],
+     "height": 2,
+     "profile": "batter",
+     "material": "sandstone"
+    }
+   ]
+  },
+  {
+   "cell": [
+    8,
+    6
+   ],
+   "ground": {
+    "preset": "dirt",
+    "color": [
+     0.26,
+     0.18,
+     0.3
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/kenney_nature/Grass_Clump_2.glb",
+     "count": 8
+    },
+    {
+     "url": "props/mega_nature/Grass_Wispy_Tall.glb",
+     "count": 6
+    },
+    {
+     "url": "props/mega_nature/Flower_3_Group.glb",
+     "count": 4
+    }
+   ],
+   "props": [
+    {
+     "url": "props/q_unature/Rock_Moss_2.glb",
+     "pos": [
+      4,
+      5
+     ]
+    },
+    {
+     "url": "props/mega_nature/Plant_1_Big.glb",
+     "pos": [
+      -4,
+      -5
+     ]
+    }
+   ],
+   "roads": [
+    {
+     "dir": "ew",
+     "width": 7
+    }
+   ]
+  },
+  {
+   "cell": [
+    9,
+    6
+   ],
+   "ground": {
+    "preset": "rock",
+    "color": [
+     0.24,
+     0.21,
+     0.33
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/kenney_nature/Grass_Clump_2.glb",
+     "count": 8
+    },
+    {
+     "url": "props/mega_nature/Grass_Wispy_Tall.glb",
+     "count": 6
+    },
+    {
+     "url": "props/mega_nature/Flower_3_Group.glb",
+     "count": 4
+    }
+   ],
+   "props": [
+    {
+     "url": "props/q_unature/Rock_Moss_2.glb",
+     "pos": [
+      4,
+      5
+     ]
+    },
+    {
+     "url": "props/mega_nature/Plant_1_Big.glb",
+     "pos": [
+      -4,
+      -5
+     ]
+    }
+   ],
+   "roads": [
+    {
+     "dir": "ew",
+     "width": 7
+    }
+   ]
+  },
+  {
+   "cell": [
+    10,
+    6
+   ],
+   "ground": {
+    "preset": "dirt",
+    "color": [
+     0.26,
+     0.18,
+     0.3
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/kenney_nature/Grass_Clump_2.glb",
+     "count": 8
+    },
+    {
+     "url": "props/mega_nature/Grass_Wispy_Tall.glb",
+     "count": 6
+    },
+    {
+     "url": "props/mega_nature/Flower_3_Group.glb",
+     "count": 4
+    }
+   ],
+   "props": [
+    {
+     "url": "props/q_unature/Rock_Moss_2.glb",
+     "pos": [
+      5,
+      5
+     ]
+    },
+    {
+     "url": "props/mega_nature/Plant_1_Big.glb",
+     "pos": [
+      -5,
+      -5
+     ]
+    }
+   ],
+   "roads": [
+    {
+     "dir": "x",
+     "width": 7
+    }
+   ]
+  },
+  {
+   "cell": [
+    11,
+    6
+   ],
+   "ground": {
+    "preset": "rock",
+    "color": [
+     0.24,
+     0.21,
+     0.33
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/kenney_nature/Grass_Clump_2.glb",
+     "count": 8
+    },
+    {
+     "url": "props/mega_nature/Grass_Wispy_Tall.glb",
+     "count": 6
+    },
+    {
+     "url": "props/mega_nature/Flower_3_Group.glb",
+     "count": 4
+    }
+   ],
+   "props": [
+    {
+     "url": "props/q_unature/Rock_Moss_2.glb",
+     "pos": [
+      5,
+      5
+     ]
+    },
+    {
+     "url": "props/mega_nature/Plant_1_Big.glb",
+     "pos": [
+      -5,
+      -5
+     ]
+    }
+   ],
+   "roads": [
+    {
+     "dir": "x",
+     "width": 7
+    }
+   ]
+  },
+  {
+   "cell": [
+    0,
+    7
+   ],
+   "ground": {
+    "preset": "sand",
+    "color": [
+     0.56,
+     0.47,
+     0.6
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/q_unature/Lilypad.glb",
+     "count": 5
+    },
+    {
+     "kind": "rock",
+     "count": 3
+    }
+   ]
+  },
+  {
+   "cell": [
+    1,
+    7
+   ],
+   "ground": {
+    "preset": "sand",
+    "color": [
+     0.56,
+     0.47,
+     0.6
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/kenney_nature/Cattail_2.glb",
+     "count": 7
+    },
+    {
+     "url": "props/q_unature/PalmTree_2.glb",
+     "count": 3
+    },
+    {
+     "kind": "rock",
+     "count": 3
+    }
+   ],
+   "props": [
+    {
+     "url": "props/kenney_nature/Log_2.glb",
+     "pos": [
+      4,
+      -4
+     ]
+    },
+    {
+     "url": "props/kenney_nature/Shell_Layered.glb",
+     "pos": [
+      -4,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "cell": [
+    2,
+    7
+   ],
+   "ground": {
+    "preset": "grass",
+    "color": [
+     0.13,
+     0.3,
+     0.27
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/q_unature/BirchTree_1.glb",
+     "count": 3
+    },
+    {
+     "url": "props/kenney_nature/Grass_Clump_2.glb",
+     "count": 10
+    },
+    {
+     "url": "props/mega_nature/Flower_3_Group.glb",
+     "count": 6
+    },
+    {
+     "url": "props/q_unature/Plant_2.glb",
+     "count": 4
+    },
+    {
+     "kind": "rock",
+     "count": 3
+    }
+   ],
+   "props": [
+    {
+     "url": "props/mega_nature/Plant_1_Big.glb",
+     "pos": [
+      6,
+      5
+     ]
+    },
+    {
+     "url": "props/q_unature/Rock_Moss_2.glb",
+     "pos": [
+      -6,
+      -5
+     ]
+    }
+   ]
+  },
+  {
+   "cell": [
+    3,
+    7
+   ],
+   "ground": {
+    "preset": "grass",
+    "color": [
+     0.13,
+     0.3,
+     0.27
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/kenney_nature/Grass_Clump_2.glb",
+     "count": 8
+    },
+    {
+     "url": "props/mega_nature/Grass_Wispy_Tall.glb",
+     "count": 6
+    },
+    {
+     "url": "props/mega_nature/Flower_3_Group.glb",
+     "count": 4
+    }
+   ],
+   "props": [
+    {
+     "url": "props/q_unature/Rock_Moss_2.glb",
+     "pos": [
+      5,
+      4
+     ]
+    },
+    {
+     "url": "props/mega_nature/Plant_1_Big.glb",
+     "pos": [
+      -5,
+      -4
+     ]
+    }
+   ],
+   "roads": [
+    {
+     "dir": "ns",
+     "width": 6
+    }
+   ]
+  },
+  {
+   "cell": [
+    4,
+    7
+   ],
+   "ground": {
+    "preset": "grass",
+    "color": [
+     0.13,
+     0.3,
+     0.27
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/q_unature/BirchTree_1.glb",
+     "count": 3
+    },
+    {
+     "url": "props/kenney_nature/Grass_Clump_2.glb",
+     "count": 10
+    },
+    {
+     "url": "props/mega_nature/Flower_3_Group.glb",
+     "count": 6
+    },
+    {
+     "url": "props/q_unature/Plant_2.glb",
+     "count": 4
+    },
+    {
+     "kind": "rock",
+     "count": 3
+    }
+   ],
+   "props": [
+    {
+     "url": "props/mega_nature/Plant_1_Big.glb",
+     "pos": [
+      6,
+      5
+     ]
+    },
+    {
+     "url": "props/q_unature/Rock_Moss_2.glb",
+     "pos": [
+      -6,
+      -5
+     ]
+    }
+   ],
+   "enemies": 2,
+   "enemy_type": "skarn",
+   "enemy_model": "/cloud-buzjpf9z8on0ylyzwny3/models/skarn.glb"
+  },
+  {
+   "cell": [
+    5,
+    7
+   ],
+   "ground": {
+    "preset": "mud",
+    "color": [
+     0.1,
+     0.17,
+     0.2
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/kenney_nature/Cattail_3.glb",
+     "count": 8
+    },
+    {
+     "url": "props/q_unature/Plant_3.glb",
+     "count": 5
+    },
+    {
+     "url": "props/q_unature/Willow_Dead_2.glb",
+     "count": 3
+    },
+    {
+     "url": "props/q_unature/Lilypad.glb",
+     "count": 4
+    }
+   ],
+   "props": [
+    {
+     "url": "props/mega_nature/Plant_1_Big.glb",
+     "pos": [
+      4,
+      -4
+     ]
+    },
+    {
+     "url": "props/kenney_nature/Log_2.glb",
+     "pos": [
+      -4,
+      4
+     ]
+    }
+   ],
+   "enemies": 1,
+   "enemy_type": "mylah",
+   "enemy_model": "/cloud-buzjpf9z8on0ylyzwny3/models/mylah.glb"
+  },
+  {
+   "cell": [
+    6,
+    7
+   ],
+   "ground": {
+    "preset": "mud",
+    "color": [
+     0.1,
+     0.17,
+     0.2
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/q_unature/Lilypad.glb",
+     "count": 8
+    },
+    {
+     "url": "props/kenney_nature/Cattail_3.glb",
+     "count": 6
+    },
+    {
+     "url": "props/q_unature/Plant_3.glb",
+     "count": 4
+    }
+   ]
+  },
+  {
+   "cell": [
+    7,
+    7
+   ],
+   "ground": {
+    "preset": "mud",
+    "color": [
+     0.1,
+     0.17,
+     0.2
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/kenney_nature/Cattail_3.glb",
+     "count": 8
+    },
+    {
+     "url": "props/q_unature/Plant_3.glb",
+     "count": 5
+    },
+    {
+     "url": "props/q_unature/Willow_Dead_2.glb",
+     "count": 3
+    },
+    {
+     "url": "props/q_unature/Lilypad.glb",
+     "count": 4
+    }
+   ],
+   "props": [
+    {
+     "url": "props/mega_nature/Plant_1_Big.glb",
+     "pos": [
+      4,
+      -4
+     ]
+    },
+    {
+     "url": "props/kenney_nature/Log_2.glb",
+     "pos": [
+      -4,
+      4
+     ]
+    }
+   ]
+  },
+  {
+   "cell": [
+    8,
+    7
+   ],
+   "ground": {
+    "preset": "mud",
+    "color": [
+     0.1,
+     0.17,
+     0.2
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/kenney_nature/Cattail_3.glb",
+     "count": 8
+    },
+    {
+     "url": "props/q_unature/Plant_3.glb",
+     "count": 5
+    },
+    {
+     "url": "props/q_unature/Willow_Dead_2.glb",
+     "count": 3
+    },
+    {
+     "url": "props/q_unature/Lilypad.glb",
+     "count": 4
+    }
+   ],
+   "props": [
+    {
+     "url": "props/mega_nature/Plant_1_Big.glb",
+     "pos": [
+      4,
+      -4
+     ]
+    },
+    {
+     "url": "props/kenney_nature/Log_2.glb",
+     "pos": [
+      -4,
+      4
+     ]
+    }
+   ]
+  },
+  {
+   "cell": [
+    9,
+    7
+   ],
+   "ground": {
+    "preset": "dirt",
+    "color": [
+     0.26,
+     0.18,
+     0.3
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/q_unature/Bush_1.glb",
+     "count": 5
+    },
+    {
+     "url": "props/q_unature/BushBerries_1.glb",
+     "count": 3
+    },
+    {
+     "url": "props/mega_nature/DeadTree_1.glb",
+     "count": 2
+    },
+    {
+     "url": "props/mega_nature/Grass_Wispy_Tall.glb",
+     "count": 8
+    },
+    {
+     "kind": "rock",
+     "count": 4
+    }
+   ],
+   "props": [
+    {
+     "url": "props/mega_nature/DeadTree_1.glb",
+     "pos": [
+      5,
+      -5
+     ]
+    },
+    {
+     "url": "props/q_unature/Rock_6.glb",
+     "pos": [
+      -5,
+      4
+     ]
+    }
+   ]
+  },
+  {
+   "cell": [
+    10,
+    7
+   ],
+   "ground": {
+    "preset": "rock",
+    "color": [
+     0.24,
+     0.21,
+     0.33
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/q_unature/Bush_1.glb",
+     "count": 5
+    },
+    {
+     "url": "props/q_unature/BushBerries_1.glb",
+     "count": 3
+    },
+    {
+     "url": "props/mega_nature/DeadTree_1.glb",
+     "count": 2
+    },
+    {
+     "url": "props/mega_nature/Grass_Wispy_Tall.glb",
+     "count": 8
+    },
+    {
+     "kind": "rock",
+     "count": 4
+    }
+   ],
+   "props": [
+    {
+     "url": "props/mega_nature/DeadTree_1.glb",
+     "pos": [
+      5,
+      -5
+     ]
+    },
+    {
+     "url": "props/q_unature/Rock_6.glb",
+     "pos": [
+      -5,
+      4
+     ]
+    }
+   ]
+  },
+  {
+   "cell": [
+    11,
+    7
+   ],
+   "ground": {
+    "preset": "dirt",
+    "color": [
+     0.26,
+     0.18,
+     0.3
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/kenney_nature/Grass_Clump_2.glb",
+     "count": 8
+    },
+    {
+     "url": "props/mega_nature/Grass_Wispy_Tall.glb",
+     "count": 6
+    },
+    {
+     "url": "props/mega_nature/Flower_3_Group.glb",
+     "count": 4
+    }
+   ],
+   "props": [
+    {
+     "url": "props/q_unature/Rock_Moss_2.glb",
+     "pos": [
+      5,
+      4
+     ]
+    },
+    {
+     "url": "props/mega_nature/Plant_1_Big.glb",
+     "pos": [
+      -5,
+      -4
+     ]
+    }
+   ],
+   "roads": [
+    {
+     "dir": "ns",
+     "width": 6
+    }
+   ]
+  },
+  {
+   "cell": [
+    0,
+    8
+   ],
+   "ground": {
+    "preset": "sand",
+    "color": [
+     0.56,
+     0.47,
+     0.6
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/q_unature/Lilypad.glb",
+     "count": 5
+    },
+    {
+     "kind": "rock",
+     "count": 3
+    }
+   ]
+  },
+  {
+   "cell": [
+    1,
+    8
+   ],
+   "ground": {
+    "preset": "sand",
+    "color": [
+     0.56,
+     0.47,
+     0.6
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/kenney_nature/Cattail_4.glb",
+     "count": 6
+    },
+    {
+     "url": "props/kenney_nature/Grass_Clump_2.glb",
+     "count": 8
+    },
+    {
+     "kind": "rock",
+     "count": 4
+    }
+   ],
+   "props": [
+    {
+     "url": "props/q_unature/PalmTree_2.glb",
+     "pos": [
+      -5,
+      5
+     ]
+    },
+    {
+     "url": "props/kenney_nature/Shell_Layered.glb",
+     "pos": [
+      5,
+      -2
+     ]
+    }
+   ]
+  },
+  {
+   "cell": [
+    2,
+    8
+   ],
+   "ground": {
+    "preset": "grass",
+    "color": [
+     0.13,
+     0.3,
+     0.27
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/q_unature/BirchTree_1.glb",
+     "count": 3
+    },
+    {
+     "url": "props/kenney_nature/Grass_Clump_2.glb",
+     "count": 9
+    },
+    {
+     "url": "props/mega_nature/Flower_3_Group.glb",
+     "count": 5
+    },
+    {
+     "kind": "rock",
+     "count": 3
+    }
+   ],
+   "props": [
+    {
+     "url": "props/mega_nature/Plant_1_Big.glb",
+     "pos": [
+      5,
+      4
+     ]
+    },
+    {
+     "url": "props/q_unature/Rock_Moss_2.glb",
+     "pos": [
+      -5,
+      -4
+     ]
+    }
+   ]
+  },
+  {
+   "cell": [
+    3,
+    8
+   ],
+   "roads": [
+    {
+     "dir": "ns",
+     "width": 6
+    }
+   ],
+   "scatter": [
+    {
+     "url": "props/kenney_nature/Grass_Clump_2.glb",
+     "count": 8
+    },
+    {
+     "url": "props/mega_nature/Grass_Wispy_Tall.glb",
+     "count": 6
+    },
+    {
+     "url": "props/mega_nature/Flower_3_Group.glb",
+     "count": 4
+    }
+   ],
+   "props": [
+    {
+     "url": "props/kenney_nature/Tent_Leanto_1.glb",
+     "pos": [
+      5,
+      2
+     ]
+    },
+    {
+     "url": "props/kenney_nature/Tent_Leanto_2.glb",
+     "pos": [
+      5.5,
+      -3
+     ]
+    },
+    {
+     "url": "props/kenney_nature/Timber_Stack_1.glb",
+     "pos": [
+      -5,
+      4
+     ]
+    }
+   ],
+   "ground": {
+    "preset": "dirt",
+    "color": [
+     0.26,
+     0.18,
+     0.3
+    ]
+   }
+  },
+  {
+   "cell": [
+    4,
+    8
+   ],
+   "ground": {
+    "preset": "dirt",
+    "color": [
+     0.26,
+     0.18,
+     0.3
+    ]
+   },
+   "structures": [
+    {
+     "pos": [
+      -4.5,
+      3.5
+     ],
+     "footprint": [
+      4,
+      4
+     ],
+     "height": 3.2,
+     "profile": "batter",
+     "cap": "dome",
+     "material": "stucco",
+     "sign_light": {
+      "color": [
+       0.25,
+       0.95,
+       0.85
+      ],
+      "energy": 2.5,
+      "range": 9
+     }
+    },
+    {
+     "pos": [
+      4.5,
+      4.5
+     ],
+     "footprint": [
+      3,
+      3
+     ],
+     "height": 2.6,
+     "profile": "vertical",
+     "cap": "dome",
+     "material": "timber"
+    }
+   ],
+   "props": [
+    {
+     "url": "/cloud-buzjpf9z8on0ylyzwny3/models/camp_totem.glb",
+     "pos": [
+      0,
+      6.5
+     ]
+    },
+    {
+     "url": "props/kenney_nature/Campfire_Teepee.glb",
+     "pos": [
+      0.5,
+      1.5
+     ]
+    },
+    {
+     "url": "props/kenney_nature/Tent_Leanto_1.glb",
+     "pos": [
+      -5,
+      -4
+     ]
+    },
+    {
+     "url": "props/kenney_nature/Log_1.glb",
+     "pos": [
+      -2,
+      -6
+     ]
+    }
+   ],
+   "scatter": [
+    {
+     "url": "props/mega_nature/Grass_Wispy_Tall.glb",
+     "count": 6
+    },
+    {
+     "kind": "rock",
+     "count": 3
+    }
+   ],
+   "npc": {
+    "id": "elder_skarn",
+    "name": "Vhast-Kar",
+    "pos": [
+     -1,
+     5
+    ],
+    "persona": "Vhast-Kar, ancient matriarch of the skarn \u2014 acid-spitter aliens whose bile eats through hull metal; hisses in short clicking sentences, respects only proven hunters; holds court by the totem of her camp on the southern plains of Xenoreach",
+    "lines": [
+     "Vhast-Kar: Ssso... the sky-wreck spat out a hunter. My brood's acid melts bone \u2014 earn your trophies, or become one."
+    ],
+    "model": "/cloud-buzjpf9z8on0ylyzwny3/models/trader.glb"
+   },
+   "chest": {
+    "pos": [
+     5,
+     -3
+    ],
+    "contents": [
+     "skarn_spitter"
+    ],
+    "gold": 30
+   },
+   "enemies": 2,
+   "enemy_type": "skarn",
+   "enemy_model": "/cloud-buzjpf9z8on0ylyzwny3/models/skarn.glb"
+  },
+  {
+   "cell": [
+    5,
+    8
+   ],
+   "ground": {
+    "preset": "mud",
+    "color": [
+     0.1,
+     0.17,
+     0.2
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/q_unature/Lilypad.glb",
+     "count": 8
+    },
+    {
+     "url": "props/kenney_nature/Cattail_3.glb",
+     "count": 6
+    },
+    {
+     "url": "props/q_unature/Plant_3.glb",
+     "count": 4
+    }
+   ]
+  },
+  {
+   "cell": [
+    6,
+    8
+   ],
+   "ground": {
+    "preset": "mud",
+    "color": [
+     0.1,
+     0.17,
+     0.2
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/q_unature/Lilypad.glb",
+     "count": 8
+    },
+    {
+     "url": "props/kenney_nature/Cattail_3.glb",
+     "count": 6
+    },
+    {
+     "url": "props/q_unature/Plant_3.glb",
+     "count": 4
+    }
+   ]
+  },
+  {
+   "cell": [
+    7,
+    8
+   ],
+   "ground": {
+    "preset": "mud",
+    "color": [
+     0.1,
+     0.17,
+     0.2
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/q_unature/Lilypad.glb",
+     "count": 8
+    },
+    {
+     "url": "props/kenney_nature/Cattail_3.glb",
+     "count": 6
+    },
+    {
+     "url": "props/q_unature/Plant_3.glb",
+     "count": 4
+    }
+   ]
+  },
+  {
+   "cell": [
+    8,
+    8
+   ],
+   "ground": {
+    "preset": "mud",
+    "color": [
+     0.1,
+     0.17,
+     0.2
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/kenney_nature/Cattail_3.glb",
+     "count": 8
+    },
+    {
+     "url": "props/q_unature/Plant_3.glb",
+     "count": 5
+    },
+    {
+     "url": "props/q_unature/Willow_Dead_2.glb",
+     "count": 3
+    },
+    {
+     "url": "props/q_unature/Lilypad.glb",
+     "count": 4
+    }
+   ],
+   "props": [
+    {
+     "url": "props/mega_nature/Plant_1_Big.glb",
+     "pos": [
+      4,
+      -4
+     ]
+    },
+    {
+     "url": "props/kenney_nature/Log_2.glb",
+     "pos": [
+      -4,
+      4
+     ]
+    }
+   ]
+  },
+  {
+   "cell": [
+    9,
+    8
+   ],
+   "ground": {
+    "preset": "rock",
+    "color": [
+     0.24,
+     0.21,
+     0.33
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/q_unature/Bush_1.glb",
+     "count": 5
+    },
+    {
+     "url": "props/q_unature/BushBerries_1.glb",
+     "count": 3
+    },
+    {
+     "url": "props/mega_nature/DeadTree_1.glb",
+     "count": 2
+    },
+    {
+     "url": "props/mega_nature/Grass_Wispy_Tall.glb",
+     "count": 8
+    },
+    {
+     "kind": "rock",
+     "count": 4
+    }
+   ],
+   "props": [
+    {
+     "url": "props/mega_nature/DeadTree_1.glb",
+     "pos": [
+      5,
+      -5
+     ]
+    },
+    {
+     "url": "props/q_unature/Rock_6.glb",
+     "pos": [
+      -5,
+      4
+     ]
+    }
+   ]
+  },
+  {
+   "cell": [
+    10,
+    8
+   ],
+   "ground": {
+    "preset": "dirt",
+    "color": [
+     0.26,
+     0.18,
+     0.3
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/q_unature/Bush_1.glb",
+     "count": 5
+    },
+    {
+     "url": "props/q_unature/BushBerries_1.glb",
+     "count": 3
+    },
+    {
+     "url": "props/mega_nature/DeadTree_1.glb",
+     "count": 2
+    },
+    {
+     "url": "props/mega_nature/Grass_Wispy_Tall.glb",
+     "count": 8
+    },
+    {
+     "kind": "rock",
+     "count": 4
+    }
+   ],
+   "props": [
+    {
+     "url": "props/mega_nature/DeadTree_1.glb",
+     "pos": [
+      5,
+      -5
+     ]
+    },
+    {
+     "url": "props/q_unature/Rock_6.glb",
+     "pos": [
+      -5,
+      4
+     ]
+    }
+   ],
+   "enemies": 1,
+   "enemy_type": "gorra",
+   "enemy_model": "/cloud-buzjpf9z8on0ylyzwny3/models/gorra.glb"
+  },
+  {
+   "cell": [
+    11,
+    8
+   ],
+   "ground": {
+    "preset": "rock",
+    "color": [
+     0.24,
+     0.21,
+     0.33
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/kenney_nature/Grass_Clump_2.glb",
+     "count": 8
+    },
+    {
+     "url": "props/mega_nature/Grass_Wispy_Tall.glb",
+     "count": 6
+    },
+    {
+     "url": "props/mega_nature/Flower_3_Group.glb",
+     "count": 4
+    }
+   ],
+   "props": [
+    {
+     "url": "props/q_unature/Rock_Moss_2.glb",
+     "pos": [
+      5,
+      4
+     ]
+    },
+    {
+     "url": "props/mega_nature/Plant_1_Big.glb",
+     "pos": [
+      -5,
+      -4
+     ]
+    }
+   ],
+   "roads": [
+    {
+     "dir": "ns",
+     "width": 6
+    }
+   ]
+  },
+  {
+   "cell": [
+    0,
+    9
+   ],
+   "ground": {
+    "preset": "sand",
+    "color": [
+     0.56,
+     0.47,
+     0.6
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/q_unature/Lilypad.glb",
+     "count": 5
+    },
+    {
+     "kind": "rock",
+     "count": 3
+    }
+   ]
+  },
+  {
+   "cell": [
+    1,
+    9
+   ],
+   "ground": {
+    "preset": "sand",
+    "color": [
+     0.56,
+     0.47,
+     0.6
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/kenney_nature/Cattail_2.glb",
+     "count": 7
+    },
+    {
+     "url": "props/q_unature/PalmTree_2.glb",
+     "count": 3
+    },
+    {
+     "kind": "rock",
+     "count": 3
+    }
+   ],
+   "props": [
+    {
+     "url": "props/kenney_nature/Log_2.glb",
+     "pos": [
+      4,
+      -4
+     ]
+    },
+    {
+     "url": "props/kenney_nature/Shell_Layered.glb",
+     "pos": [
+      -4,
+      3
+     ]
+    }
+   ],
+   "chest": {
+    "pos": [
+     3,
+     -3
+    ],
+    "gold": 60
+   }
+  },
+  {
+   "cell": [
+    2,
+    9
+   ],
+   "ground": {
+    "preset": "grass",
+    "color": [
+     0.13,
+     0.3,
+     0.27
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/q_unature/BirchTree_1.glb",
+     "count": 3
+    },
+    {
+     "url": "props/kenney_nature/Grass_Clump_2.glb",
+     "count": 9
+    },
+    {
+     "url": "props/mega_nature/Flower_3_Group.glb",
+     "count": 5
+    },
+    {
+     "kind": "rock",
+     "count": 3
+    }
+   ],
+   "props": [
+    {
+     "url": "props/mega_nature/Plant_1_Big.glb",
+     "pos": [
+      5,
+      4
+     ]
+    },
+    {
+     "url": "props/q_unature/Rock_Moss_2.glb",
+     "pos": [
+      -5,
+      -4
+     ]
+    }
+   ]
+  },
+  {
+   "cell": [
+    3,
+    9
+   ],
+   "roads": [
+    {
+     "dir": "ns",
+     "width": 6
+    }
+   ],
+   "scatter": [
+    {
+     "url": "props/kenney_nature/Grass_Clump_2.glb",
+     "count": 8
+    },
+    {
+     "url": "props/mega_nature/Grass_Wispy_Tall.glb",
+     "count": 6
+    },
+    {
+     "url": "props/mega_nature/Flower_3_Group.glb",
+     "count": 4
+    }
+   ],
+   "props": [
+    {
+     "url": "props/kenney_nature/Tent_Leanto_1.glb",
+     "pos": [
+      5,
+      3
+     ]
+    },
+    {
+     "url": "props/kenney_nature/Timber_Stack_1.glb",
+     "pos": [
+      -5,
+      -4
+     ]
+    }
+   ],
+   "ground": {
+    "preset": "dirt",
+    "color": [
+     0.26,
+     0.18,
+     0.3
+    ]
+   }
+  },
+  {
+   "cell": [
+    4,
+    9
+   ],
+   "ground": {
+    "preset": "dirt",
+    "color": [
+     0.26,
+     0.18,
+     0.3
+    ]
+   },
+   "structures": [
+    {
+     "pos": [
+      3,
+      -3
+     ],
+     "footprint": [
+      3.5,
+      3.5
+     ],
+     "height": 2.8,
+     "profile": "batter",
+     "cap": "dome",
+     "material": "stucco"
+    }
+   ],
+   "props": [
+    {
+     "url": "props/kenney_nature/Tent_Leanto_2.glb",
+     "pos": [
+      -4,
+      3
+     ]
+    },
+    {
+     "url": "props/kenney_nature/Log_1.glb",
+     "pos": [
+      -2,
+      -5
+     ]
+    }
+   ],
+   "scatter": [
+    {
+     "url": "props/mega_nature/Grass_Wispy_Tall.glb",
+     "count": 6
+    },
+    {
+     "kind": "rock",
+     "count": 2
+    }
+   ],
+   "enemies": 2,
+   "enemy_type": "skarn",
+   "enemy_model": "/cloud-buzjpf9z8on0ylyzwny3/models/skarn.glb"
+  },
+  {
+   "cell": [
+    5,
+    9
+   ],
+   "ground": {
+    "preset": "mud",
+    "color": [
+     0.1,
+     0.17,
+     0.2
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/kenney_nature/Cattail_3.glb",
+     "count": 8
+    },
+    {
+     "url": "props/q_unature/Plant_3.glb",
+     "count": 5
+    },
+    {
+     "url": "props/q_unature/Willow_Dead_2.glb",
+     "count": 3
+    },
+    {
+     "url": "props/q_unature/Lilypad.glb",
+     "count": 4
+    }
+   ],
+   "props": [
+    {
+     "url": "props/mega_nature/Plant_1_Big.glb",
+     "pos": [
+      4,
+      -4
+     ]
+    },
+    {
+     "url": "props/kenney_nature/Log_2.glb",
+     "pos": [
+      -4,
+      4
+     ]
+    }
+   ]
+  },
+  {
+   "cell": [
+    6,
+    9
+   ],
+   "ground": {
+    "preset": "mud",
+    "color": [
+     0.1,
+     0.17,
+     0.2
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/kenney_nature/Cattail_3.glb",
+     "count": 8
+    },
+    {
+     "url": "props/q_unature/Plant_3.glb",
+     "count": 5
+    },
+    {
+     "url": "props/q_unature/Willow_Dead_2.glb",
+     "count": 3
+    },
+    {
+     "url": "props/q_unature/Lilypad.glb",
+     "count": 4
+    }
+   ],
+   "props": [
+    {
+     "url": "props/mega_nature/Plant_1_Big.glb",
+     "pos": [
+      4,
+      -4
+     ]
+    },
+    {
+     "url": "props/kenney_nature/Log_2.glb",
+     "pos": [
+      -4,
+      4
+     ]
+    }
+   ]
+  },
+  {
+   "cell": [
+    7,
+    9
+   ],
+   "ground": {
+    "preset": "mud",
+    "color": [
+     0.1,
+     0.17,
+     0.2
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/q_unature/Lilypad.glb",
+     "count": 8
+    },
+    {
+     "url": "props/kenney_nature/Cattail_3.glb",
+     "count": 6
+    },
+    {
+     "url": "props/q_unature/Plant_3.glb",
+     "count": 4
+    }
+   ]
+  },
+  {
+   "cell": [
+    8,
+    9
+   ],
+   "ground": {
+    "preset": "mud",
+    "color": [
+     0.1,
+     0.17,
+     0.2
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/kenney_nature/Cattail_3.glb",
+     "count": 6
+    },
+    {
+     "url": "props/q_unature/Plant_3.glb",
+     "count": 4
+    }
+   ],
+   "props": [
+    {
+     "url": "props/kenney_nature/Tent_Leanto_2.glb",
+     "pos": [
+      4,
+      4
+     ]
+    },
+    {
+     "url": "props/kenney_nature/Log_2.glb",
+     "pos": [
+      -4,
+      -3
+     ]
+    }
+   ],
+   "enemies": 2,
+   "enemy_type": "mylah",
+   "enemy_model": "/cloud-buzjpf9z8on0ylyzwny3/models/mylah.glb"
+  },
+  {
+   "cell": [
+    9,
+    9
+   ],
+   "ground": {
+    "preset": "dirt",
+    "color": [
+     0.26,
+     0.18,
+     0.3
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/q_unature/Bush_1.glb",
+     "count": 5
+    },
+    {
+     "url": "props/q_unature/BushBerries_1.glb",
+     "count": 3
+    },
+    {
+     "url": "props/mega_nature/DeadTree_1.glb",
+     "count": 2
+    },
+    {
+     "url": "props/mega_nature/Grass_Wispy_Tall.glb",
+     "count": 8
+    },
+    {
+     "kind": "rock",
+     "count": 4
+    }
+   ],
+   "props": [
+    {
+     "url": "props/mega_nature/DeadTree_1.glb",
+     "pos": [
+      5,
+      -5
+     ]
+    },
+    {
+     "url": "props/q_unature/Rock_6.glb",
+     "pos": [
+      -5,
+      4
+     ]
+    }
+   ]
+  },
+  {
+   "cell": [
+    10,
+    9
+   ],
+   "ground": {
+    "preset": "rock",
+    "color": [
+     0.24,
+     0.21,
+     0.33
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/q_unature/Bush_1.glb",
+     "count": 5
+    },
+    {
+     "url": "props/q_unature/BushBerries_1.glb",
+     "count": 3
+    },
+    {
+     "url": "props/mega_nature/DeadTree_1.glb",
+     "count": 2
+    },
+    {
+     "url": "props/mega_nature/Grass_Wispy_Tall.glb",
+     "count": 8
+    },
+    {
+     "kind": "rock",
+     "count": 4
+    }
+   ],
+   "props": [
+    {
+     "url": "props/mega_nature/DeadTree_1.glb",
+     "pos": [
+      5,
+      -5
+     ]
+    },
+    {
+     "url": "props/q_unature/Rock_6.glb",
+     "pos": [
+      -5,
+      4
+     ]
+    }
+   ]
+  },
+  {
+   "cell": [
+    11,
+    9
+   ],
+   "ground": {
+    "preset": "dirt",
+    "color": [
+     0.26,
+     0.18,
+     0.3
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/kenney_nature/Grass_Clump_2.glb",
+     "count": 8
+    },
+    {
+     "url": "props/mega_nature/Grass_Wispy_Tall.glb",
+     "count": 6
+    },
+    {
+     "url": "props/mega_nature/Flower_3_Group.glb",
+     "count": 4
+    }
+   ],
+   "props": [
+    {
+     "url": "props/q_unature/Rock_Moss_2.glb",
+     "pos": [
+      5,
+      4
+     ]
+    },
+    {
+     "url": "props/mega_nature/Plant_1_Big.glb",
+     "pos": [
+      -5,
+      -4
+     ]
+    }
+   ],
+   "roads": [
+    {
+     "dir": "ns",
+     "width": 6
+    }
+   ]
+  },
+  {
+   "cell": [
+    0,
+    10
+   ],
+   "ground": {
+    "preset": "sand",
+    "color": [
+     0.56,
+     0.47,
+     0.6
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/kenney_nature/Cattail_2.glb",
+     "count": 7
+    },
+    {
+     "url": "props/q_unature/PalmTree_2.glb",
+     "count": 3
+    },
+    {
+     "kind": "rock",
+     "count": 3
+    }
+   ],
+   "props": [
+    {
+     "url": "props/kenney_nature/Log_2.glb",
+     "pos": [
+      4,
+      -4
+     ]
+    },
+    {
+     "url": "props/kenney_nature/Shell_Layered.glb",
+     "pos": [
+      -4,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "cell": [
+    1,
+    10
+   ],
+   "ground": {
+    "preset": "sand",
+    "color": [
+     0.56,
+     0.47,
+     0.6
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/kenney_nature/Cattail_4.glb",
+     "count": 6
+    },
+    {
+     "url": "props/kenney_nature/Grass_Clump_2.glb",
+     "count": 8
+    },
+    {
+     "kind": "rock",
+     "count": 4
+    }
+   ],
+   "props": [
+    {
+     "url": "props/q_unature/PalmTree_2.glb",
+     "pos": [
+      -5,
+      5
+     ]
+    },
+    {
+     "url": "props/kenney_nature/Shell_Layered.glb",
+     "pos": [
+      5,
+      -2
+     ]
+    }
+   ]
+  },
+  {
+   "cell": [
+    2,
+    10
+   ],
+   "ground": {
+    "preset": "grass",
+    "color": [
+     0.13,
+     0.3,
+     0.27
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/q_unature/BirchTree_1.glb",
+     "count": 3
+    },
+    {
+     "url": "props/q_unature/Bush_1.glb",
+     "count": 4
+    },
+    {
+     "url": "props/mega_nature/Grass_Wispy_Tall.glb",
+     "count": 8
+    },
+    {
+     "url": "props/mega_nature/Flower_3_Group.glb",
+     "count": 4
+    },
+    {
+     "kind": "rock",
+     "count": 3
+    }
+   ],
+   "props": [
+    {
+     "url": "props/mega_nature/Plant_1_Big.glb",
+     "pos": [
+      -5,
+      5
+     ]
+    },
+    {
+     "url": "props/q_unature/Rock_Moss_2.glb",
+     "pos": [
+      5,
+      -4
+     ]
+    }
+   ]
+  },
+  {
+   "cell": [
+    3,
+    10
+   ],
+   "ground": {
+    "preset": "dirt",
+    "color": [
+     0.26,
+     0.18,
+     0.3
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/kenney_nature/Grass_Clump_2.glb",
+     "count": 8
+    },
+    {
+     "url": "props/mega_nature/Grass_Wispy_Tall.glb",
+     "count": 6
+    },
+    {
+     "url": "props/mega_nature/Flower_3_Group.glb",
+     "count": 4
+    }
+   ],
+   "props": [
+    {
+     "url": "props/q_unature/Rock_Moss_2.glb",
+     "pos": [
+      5,
+      5
+     ]
+    },
+    {
+     "url": "props/mega_nature/Plant_1_Big.glb",
+     "pos": [
+      -5,
+      -5
+     ]
+    }
+   ],
+   "roads": [
+    {
+     "dir": "x",
+     "width": 6
+    }
+   ]
+  },
+  {
+   "cell": [
+    4,
+    10
+   ],
+   "ground": {
+    "preset": "grass",
+    "color": [
+     0.13,
+     0.3,
+     0.27
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/kenney_nature/Grass_Clump_2.glb",
+     "count": 8
+    },
+    {
+     "url": "props/mega_nature/Grass_Wispy_Tall.glb",
+     "count": 6
+    },
+    {
+     "url": "props/mega_nature/Flower_3_Group.glb",
+     "count": 4
+    }
+   ],
+   "props": [
+    {
+     "url": "props/q_unature/Rock_Moss_2.glb",
+     "pos": [
+      4,
+      5
+     ]
+    },
+    {
+     "url": "props/mega_nature/Plant_1_Big.glb",
+     "pos": [
+      -4,
+      -5
+     ]
+    }
+   ],
+   "roads": [
+    {
+     "dir": "ew",
+     "width": 6
+    }
+   ]
+  },
+  {
+   "cell": [
+    5,
+    10
+   ],
+   "ground": {
+    "preset": "dirt",
+    "color": [
+     0.26,
+     0.18,
+     0.3
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/kenney_nature/Grass_Clump_2.glb",
+     "count": 8
+    },
+    {
+     "url": "props/mega_nature/Grass_Wispy_Tall.glb",
+     "count": 6
+    },
+    {
+     "url": "props/mega_nature/Flower_3_Group.glb",
+     "count": 4
+    }
+   ],
+   "props": [
+    {
+     "url": "props/q_unature/Rock_Moss_2.glb",
+     "pos": [
+      4,
+      5
+     ]
+    },
+    {
+     "url": "props/mega_nature/Plant_1_Big.glb",
+     "pos": [
+      -4,
+      -5
+     ]
+    }
+   ],
+   "roads": [
+    {
+     "dir": "ew",
+     "width": 6
+    }
+   ]
+  },
+  {
+   "cell": [
+    6,
+    10
+   ],
+   "ground": {
+    "preset": "grass",
+    "color": [
+     0.13,
+     0.3,
+     0.27
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/kenney_nature/Grass_Clump_2.glb",
+     "count": 8
+    },
+    {
+     "url": "props/mega_nature/Grass_Wispy_Tall.glb",
+     "count": 6
+    },
+    {
+     "url": "props/mega_nature/Flower_3_Group.glb",
+     "count": 4
+    }
+   ],
+   "props": [
+    {
+     "url": "props/q_unature/Rock_Moss_2.glb",
+     "pos": [
+      4,
+      5
+     ]
+    },
+    {
+     "url": "props/mega_nature/Plant_1_Big.glb",
+     "pos": [
+      -4,
+      -5
+     ]
+    }
+   ],
+   "roads": [
+    {
+     "dir": "ew",
+     "width": 6
+    }
+   ]
+  },
+  {
+   "cell": [
+    7,
+    10
+   ],
+   "ground": {
+    "preset": "dirt",
+    "color": [
+     0.26,
+     0.18,
+     0.3
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/kenney_nature/Grass_Clump_2.glb",
+     "count": 8
+    },
+    {
+     "url": "props/mega_nature/Grass_Wispy_Tall.glb",
+     "count": 6
+    },
+    {
+     "url": "props/mega_nature/Flower_3_Group.glb",
+     "count": 4
+    }
+   ],
+   "props": [
+    {
+     "url": "props/kenney_nature/Tent_Leanto_1.glb",
+     "pos": [
+      3,
+      5
+     ]
+    },
+    {
+     "url": "props/kenney_nature/Tent_Leanto_2.glb",
+     "pos": [
+      -4,
+      -5
+     ]
+    }
+   ],
+   "roads": [
+    {
+     "dir": "ew",
+     "width": 6
+    }
+   ],
+   "enemies": 2,
+   "enemy_type": "mylah",
+   "enemy_model": "/cloud-buzjpf9z8on0ylyzwny3/models/mylah.glb"
+  },
+  {
+   "cell": [
+    8,
+    10
+   ],
+   "ground": {
+    "preset": "dirt",
+    "color": [
+     0.26,
+     0.18,
+     0.3
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/kenney_nature/Cattail_3.glb",
+     "count": 5
+    },
+    {
+     "url": "props/mega_nature/Flower_3_Group.glb",
+     "count": 4
+    }
+   ],
+   "props": [
+    {
+     "url": "/cloud-buzjpf9z8on0ylyzwny3/models/camp_totem.glb",
+     "pos": [
+      0,
+      -5.5
+     ]
+    },
+    {
+     "url": "props/kenney_nature/Campfire_Teepee.glb",
+     "pos": [
+      -1,
+      0
+     ]
+    },
+    {
+     "url": "props/kenney_nature/Tent_Leanto_1.glb",
+     "pos": [
+      5,
+      -4
+     ]
+    },
+    {
+     "url": "props/mega_nature/Plant_1_Big.glb",
+     "pos": [
+      -6,
+      -3
+     ]
+    }
+   ],
+   "structures": [
+    {
+     "pos": [
+      -4,
+      3
+     ],
+     "footprint": [
+      4,
+      4
+     ],
+     "height": 3.2,
+     "profile": "batter",
+     "cap": "dome",
+     "material": "marble",
+     "sign_light": {
+      "color": [
+       0.25,
+       0.95,
+       0.85
+      ],
+      "energy": 2.5,
+      "range": 9
+     }
+    },
+    {
+     "pos": [
+      4,
+      4
+     ],
+     "footprint": [
+      3,
+      3
+     ],
+     "height": 2.6,
+     "profile": "vertical",
+     "cap": "dome",
+     "material": "timber"
+    }
+   ],
+   "npc": {
+    "id": "elder_mylah",
+    "name": "Sha-Lumen",
+    "pos": [
+     1,
+     -2
+    ],
+    "persona": "Sha-Lumen, luminous elder of the mylah \u2014 healer aliens of the glowing fen whose song knits torn flesh; serene, riddling, mourns every kill the hunt demands; her light pulses brighter when she speaks truth",
+    "lines": [
+     "Sha-Lumen: We mend what the world breaks, hunter. Even you. But the broodmaw in the far spires... that wound the fen cannot close."
+    ],
+    "model": "/cloud-buzjpf9z8on0ylyzwny3/models/trader.glb"
+   },
+   "chest": {
+    "pos": [
+     -5,
+     -4
+    ],
+    "contents": [
+     "mylah_staff"
+    ],
+    "gold": 30
+   }
+  },
+  {
+   "cell": [
+    9,
+    10
+   ],
+   "ground": {
+    "preset": "dirt",
+    "color": [
+     0.26,
+     0.18,
+     0.3
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/q_unature/BirchTree_1.glb",
+     "count": 3
+    },
+    {
+     "url": "props/q_unature/Bush_1.glb",
+     "count": 4
+    },
+    {
+     "url": "props/mega_nature/Grass_Wispy_Tall.glb",
+     "count": 8
+    },
+    {
+     "url": "props/mega_nature/Flower_3_Group.glb",
+     "count": 4
+    },
+    {
+     "kind": "rock",
+     "count": 3
+    }
+   ],
+   "props": [
+    {
+     "url": "props/mega_nature/Plant_1_Big.glb",
+     "pos": [
+      -5,
+      5
+     ]
+    },
+    {
+     "url": "props/q_unature/Rock_Moss_2.glb",
+     "pos": [
+      5,
+      -4
+     ]
+    }
+   ]
+  },
+  {
+   "cell": [
+    10,
+    10
+   ],
+   "ground": {
+    "preset": "rock",
+    "color": [
+     0.24,
+     0.21,
+     0.33
+    ]
+   },
+   "structures": [
+    {
+     "pos": [
+      0,
+      0
+     ],
+     "footprint": [
+      8,
+      8
+     ],
+     "height": 5,
+     "profile": "ziggurat",
+     "steps": 3,
+     "material": "sandstone"
+    }
+   ],
+   "scatter": [
+    {
+     "kind": "rock",
+     "count": 6
+    },
+    {
+     "url": "props/mega_nature/DeadTree_1.glb",
+     "count": 3
+    }
+   ],
+   "props": [
+    {
+     "url": "props/mod_temple/Prop_Rubble_1.glb",
+     "pos": [
+      6,
+      -5
+     ]
+    },
+    {
+     "url": "props/mod_temple/Prop_Rubble_2.glb",
+     "pos": [
+      -6,
+      5
+     ]
+    }
+   ]
+  },
+  {
+   "cell": [
+    11,
+    10
+   ],
+   "roads": [
+    {
+     "dir": "ns",
+     "width": 6
+    }
+   ],
+   "scatter": [
+    {
+     "kind": "rock",
+     "count": 5
+    }
+   ],
+   "props": [
+    {
+     "url": "props/mod_temple/Prop_Rubble_1.glb",
+     "pos": [
+      4.5,
+      5
+     ]
+    }
+   ],
+   "ground": {
+    "preset": "rock",
+    "color": [
+     0.24,
+     0.21,
+     0.33
+    ]
+   },
+   "structures": [
+    {
+     "pos": [
+      -5,
+      3
+     ],
+     "footprint": [
+      2,
+      2
+     ],
+     "height": 6,
+     "profile": "taper",
+     "cap": "spire",
+     "material": "rock"
+    },
+    {
+     "pos": [
+      5,
+      -3
+     ],
+     "footprint": [
+      2,
+      2
+     ],
+     "height": 7,
+     "profile": "taper",
+     "cap": "spire",
+     "material": "rock"
+    }
+   ]
+  },
+  {
+   "cell": [
+    0,
+    11
+   ],
+   "ground": {
+    "preset": "sand",
+    "color": [
+     0.56,
+     0.47,
+     0.6
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/kenney_nature/Cattail_4.glb",
+     "count": 6
+    },
+    {
+     "url": "props/kenney_nature/Grass_Clump_2.glb",
+     "count": 8
+    },
+    {
+     "kind": "rock",
+     "count": 4
+    }
+   ],
+   "props": [
+    {
+     "url": "props/q_unature/PalmTree_2.glb",
+     "pos": [
+      -5,
+      5
+     ]
+    },
+    {
+     "url": "props/kenney_nature/Shell_Layered.glb",
+     "pos": [
+      5,
+      -2
+     ]
+    }
+   ]
+  },
+  {
+   "cell": [
+    1,
+    11
+   ],
+   "ground": {
+    "preset": "sand",
+    "color": [
+     0.56,
+     0.47,
+     0.6
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/kenney_nature/Cattail_2.glb",
+     "count": 7
+    },
+    {
+     "url": "props/q_unature/PalmTree_2.glb",
+     "count": 3
+    },
+    {
+     "kind": "rock",
+     "count": 3
+    }
+   ],
+   "props": [
+    {
+     "url": "props/kenney_nature/Log_2.glb",
+     "pos": [
+      4,
+      -4
+     ]
+    },
+    {
+     "url": "props/kenney_nature/Shell_Layered.glb",
+     "pos": [
+      -4,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "cell": [
+    2,
+    11
+   ],
+   "ground": {
+    "preset": "dirt",
+    "color": [
+     0.26,
+     0.18,
+     0.3
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/q_unature/BirchTree_1.glb",
+     "count": 3
+    },
+    {
+     "url": "props/q_unature/Bush_1.glb",
+     "count": 4
+    },
+    {
+     "url": "props/mega_nature/Grass_Wispy_Tall.glb",
+     "count": 8
+    },
+    {
+     "url": "props/mega_nature/Flower_3_Group.glb",
+     "count": 4
+    },
+    {
+     "kind": "rock",
+     "count": 3
+    }
+   ],
+   "props": [
+    {
+     "url": "props/mega_nature/Plant_1_Big.glb",
+     "pos": [
+      -5,
+      5
+     ]
+    },
+    {
+     "url": "props/q_unature/Rock_Moss_2.glb",
+     "pos": [
+      5,
+      -4
+     ]
+    }
+   ]
+  },
+  {
+   "cell": [
+    3,
+    11
+   ],
+   "ground": {
+    "preset": "grass",
+    "color": [
+     0.13,
+     0.3,
+     0.27
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/q_unature/BirchTree_1.glb",
+     "count": 3
+    },
+    {
+     "url": "props/q_unature/Bush_1.glb",
+     "count": 4
+    },
+    {
+     "url": "props/mega_nature/Grass_Wispy_Tall.glb",
+     "count": 8
+    },
+    {
+     "url": "props/mega_nature/Flower_3_Group.glb",
+     "count": 4
+    },
+    {
+     "kind": "rock",
+     "count": 3
+    }
+   ],
+   "props": [
+    {
+     "url": "props/mega_nature/Plant_1_Big.glb",
+     "pos": [
+      -5,
+      5
+     ]
+    },
+    {
+     "url": "props/q_unature/Rock_Moss_2.glb",
+     "pos": [
+      5,
+      -4
+     ]
+    }
+   ]
+  },
+  {
+   "cell": [
+    4,
+    11
+   ],
+   "ground": {
+    "preset": "dirt",
+    "color": [
+     0.26,
+     0.18,
+     0.3
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/q_unature/BirchTree_1.glb",
+     "count": 3
+    },
+    {
+     "url": "props/q_unature/Bush_1.glb",
+     "count": 4
+    },
+    {
+     "url": "props/mega_nature/Grass_Wispy_Tall.glb",
+     "count": 8
+    },
+    {
+     "url": "props/mega_nature/Flower_3_Group.glb",
+     "count": 4
+    },
+    {
+     "kind": "rock",
+     "count": 3
+    }
+   ],
+   "props": [
+    {
+     "url": "props/mega_nature/Plant_1_Big.glb",
+     "pos": [
+      -5,
+      5
+     ]
+    },
+    {
+     "url": "props/q_unature/Rock_Moss_2.glb",
+     "pos": [
+      5,
+      -4
+     ]
+    }
+   ]
+  },
+  {
+   "cell": [
+    5,
+    11
+   ],
+   "ground": {
+    "preset": "grass",
+    "color": [
+     0.13,
+     0.3,
+     0.27
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/q_unature/BirchTree_1.glb",
+     "count": 3
+    },
+    {
+     "url": "props/q_unature/Bush_1.glb",
+     "count": 4
+    },
+    {
+     "url": "props/mega_nature/Grass_Wispy_Tall.glb",
+     "count": 8
+    },
+    {
+     "url": "props/mega_nature/Flower_3_Group.glb",
+     "count": 4
+    },
+    {
+     "kind": "rock",
+     "count": 3
+    }
+   ],
+   "props": [
+    {
+     "url": "props/mega_nature/Plant_1_Big.glb",
+     "pos": [
+      -5,
+      5
+     ]
+    },
+    {
+     "url": "props/q_unature/Rock_Moss_2.glb",
+     "pos": [
+      5,
+      -4
+     ]
+    }
+   ]
+  },
+  {
+   "cell": [
+    6,
+    11
+   ],
+   "ground": {
+    "preset": "dirt",
+    "color": [
+     0.26,
+     0.18,
+     0.3
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/q_unature/BirchTree_1.glb",
+     "count": 3
+    },
+    {
+     "url": "props/q_unature/Bush_1.glb",
+     "count": 4
+    },
+    {
+     "url": "props/mega_nature/Grass_Wispy_Tall.glb",
+     "count": 8
+    },
+    {
+     "url": "props/mega_nature/Flower_3_Group.glb",
+     "count": 4
+    },
+    {
+     "kind": "rock",
+     "count": 3
+    }
+   ],
+   "props": [
+    {
+     "url": "props/mega_nature/Plant_1_Big.glb",
+     "pos": [
+      -5,
+      5
+     ]
+    },
+    {
+     "url": "props/q_unature/Rock_Moss_2.glb",
+     "pos": [
+      5,
+      -4
+     ]
+    }
+   ],
+   "enemies": 1,
+   "enemy_type": "skarn",
+   "enemy_model": "/cloud-buzjpf9z8on0ylyzwny3/models/skarn.glb"
+  },
+  {
+   "cell": [
+    7,
+    11
+   ],
+   "ground": {
+    "preset": "grass",
+    "color": [
+     0.13,
+     0.3,
+     0.27
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/q_unature/BirchTree_1.glb",
+     "count": 3
+    },
+    {
+     "url": "props/q_unature/Bush_1.glb",
+     "count": 4
+    },
+    {
+     "url": "props/mega_nature/Grass_Wispy_Tall.glb",
+     "count": 8
+    },
+    {
+     "url": "props/mega_nature/Flower_3_Group.glb",
+     "count": 4
+    },
+    {
+     "kind": "rock",
+     "count": 3
+    }
+   ],
+   "props": [
+    {
+     "url": "props/mega_nature/Plant_1_Big.glb",
+     "pos": [
+      -5,
+      5
+     ]
+    },
+    {
+     "url": "props/q_unature/Rock_Moss_2.glb",
+     "pos": [
+      5,
+      -4
+     ]
+    }
+   ]
+  },
+  {
+   "cell": [
+    8,
+    11
+   ],
+   "ground": {
+    "preset": "dirt",
+    "color": [
+     0.26,
+     0.18,
+     0.3
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/q_unature/BirchTree_1.glb",
+     "count": 3
+    },
+    {
+     "url": "props/q_unature/Bush_1.glb",
+     "count": 4
+    },
+    {
+     "url": "props/mega_nature/Grass_Wispy_Tall.glb",
+     "count": 8
+    },
+    {
+     "url": "props/mega_nature/Flower_3_Group.glb",
+     "count": 4
+    },
+    {
+     "kind": "rock",
+     "count": 3
+    }
+   ],
+   "props": [
+    {
+     "url": "props/mega_nature/Plant_1_Big.glb",
+     "pos": [
+      -5,
+      5
+     ]
+    },
+    {
+     "url": "props/q_unature/Rock_Moss_2.glb",
+     "pos": [
+      5,
+      -4
+     ]
+    }
+   ]
+  },
+  {
+   "cell": [
+    9,
+    11
+   ],
+   "ground": {
+    "preset": "grass",
+    "color": [
+     0.13,
+     0.3,
+     0.27
+    ]
+   },
+   "scatter": [
+    {
+     "url": "props/q_unature/BirchTree_1.glb",
+     "count": 3
+    },
+    {
+     "url": "props/q_unature/Bush_1.glb",
+     "count": 4
+    },
+    {
+     "url": "props/mega_nature/Grass_Wispy_Tall.glb",
+     "count": 8
+    },
+    {
+     "url": "props/mega_nature/Flower_3_Group.glb",
+     "count": 4
+    },
+    {
+     "kind": "rock",
+     "count": 3
+    }
+   ],
+   "props": [
+    {
+     "url": "props/mega_nature/Plant_1_Big.glb",
+     "pos": [
+      -5,
+      5
+     ]
+    },
+    {
+     "url": "props/q_unature/Rock_Moss_2.glb",
+     "pos": [
+      5,
+      -4
+     ]
+    }
+   ]
+  },
+  {
+   "cell": [
+    10,
+    11
+   ],
+   "ground": {
+    "preset": "rock",
+    "color": [
+     0.24,
+     0.21,
+     0.33
+    ]
+   },
+   "structures": [
+    {
+     "pos": [
+      4,
+      4
+     ],
+     "footprint": [
+      2,
+      2
+     ],
+     "height": 5,
+     "profile": "taper",
+     "cap": "spire",
+     "material": "rock"
+    }
+   ],
+   "scatter": [
+    {
+     "kind": "rock",
+     "count": 6
+    },
+    {
+     "url": "props/mega_nature/DeadTree_1.glb",
+     "count": 2
+    }
+   ],
+   "props": [
+    {
+     "url": "props/mod_temple/Prop_Rubble_2.glb",
+     "pos": [
+      -5,
+      -4
+     ]
+    }
+   ],
+   "enemies": 2,
+   "enemy_type": "skarn",
+   "enemy_model": "/cloud-buzjpf9z8on0ylyzwny3/models/skarn.glb"
+  },
+  {
+   "cell": [
+    11,
+    11
+   ],
+   "ground": {
+    "preset": "rock",
+    "color": [
+     0.24,
+     0.21,
+     0.33
+    ]
+   },
+   "landmark": {
+    "url": "/cloud-buzjpf9z8on0ylyzwny3/models/hive_spire.glb",
+    "pos": [
+     3.5,
+     -3.5
+    ],
+    "collider": "mesh"
+   },
+   "structures": [
+    {
+     "pos": [
+      -4,
+      -5
+     ],
+     "footprint": [
+      2,
+      2
+     ],
+     "height": 4,
+     "profile": "taper",
+     "cap": "spire",
+     "material": "rock",
+     "sign_light": {
+      "color": [
+       0.25,
+       0.95,
+       0.85
+      ],
+      "energy": 2.5,
+      "range": 9
+     }
+    }
+   ],
+   "scatter": [
+    {
+     "kind": "rock",
+     "count": 5
+    }
+   ],
+   "props": [
+    {
+     "url": "props/mod_temple/Prop_Rubble_1.glb",
+     "pos": [
+      0,
+      6
+     ]
+    }
+   ],
+   "chest": {
+    "pos": [
+     -5,
+     4
+    ],
+    "contents": [
+     "broodmaw_fang"
+    ],
+    "gold": 80
+   },
+   "enemies": 1,
+   "enemy_type": "broodmaw",
+   "enemy_model": "/cloud-buzjpf9z8on0ylyzwny3/models/broodmaw.glb"
+  }
+ ],
+ "hero_model": "/cloud-buzjpf9z8on0ylyzwny3/models/hunter.glb",
+ "default_npc_model": "/cloud-buzjpf9z8on0ylyzwny3/models/trader.glb",
+ "start_weapon": "wrist_blade",
+ "weapons": {
+  "wrist_blade": {
+   "name": "Wrist Blades",
+   "kind": "melee",
+   "damage": 22,
+   "rate": 2.0
+  },
+  "plasma_caster": {
+   "name": "Plasma Caster",
+   "kind": "ranged",
+   "damage": 30,
+   "rate": 1.2,
+   "range": 24.0,
+   "projectile": {
+    "speed": 26.0,
+    "arc": false
+   },
+   "model": "parametric:rifle"
+  },
+  "skarn_spitter": {
+   "name": "Skarn Acid Spitter",
+   "kind": "ranged",
+   "damage": 26,
+   "rate": 1.8,
+   "range": 18.0,
+   "projectile": {
+    "speed": 22.0,
+    "arc": false
+   },
+   "model": "parametric:rifle"
+  },
+  "veyth_shard": {
+   "name": "Veyth Phase Shard",
+   "kind": "melee",
+   "damage": 40,
+   "rate": 2.2
+  },
+  "gorra_maul": {
+   "name": "Gorra Skullmaul",
+   "kind": "melee",
+   "damage": 60,
+   "rate": 0.8
+  },
+  "mylah_staff": {
+   "name": "Mylah Sigil Staff",
+   "kind": "ranged",
+   "damage": 24,
+   "rate": 2.4,
+   "range": 22.0,
+   "projectile": {
+    "speed": 24.0,
+    "arc": false
+   },
+   "model": "parametric:staff"
+  },
+  "broodmaw_fang": {
+   "name": "Broodmaw Fang",
+   "kind": "melee",
+   "damage": 75,
+   "rate": 1.4
+  }
+ },
+ "sky": {
+  "loop": true,
+  "cycle": [
+   {
+    "time": "day",
+    "weather": "clear",
+    "seconds": 75
+   },
+   {
+    "time": "day",
+    "weather": "cloudy",
+    "seconds": 40
+   },
+   {
+    "time": "sunset",
+    "weather": "clear",
+    "seconds": 30
+   },
+   {
+    "time": "night",
+    "weather": "clear",
+    "seconds": 45
+   },
+   {
+    "time": "night",
+    "weather": "storm",
+    "seconds": 40
+   },
+   {
+    "time": "night",
+    "weather": "rain",
+    "seconds": 25
+   },
+   {
+    "time": "sunrise",
+    "weather": "fog",
+    "seconds": 30
+   }
+  ]
+ }
+}

@@ -1288,7 +1288,9 @@ func drive_input_world(world_dir: Vector2) -> void:
 	var thr := clampf(world_dir.length(), 0.0, 1.0)
 	if thr < 0.05:
 		if _airborne:
-			_input = Vector2.ZERO   # wings level, cruise on implicit throttle
+			# stick released in flight: wings level + a GENTLE SINK, so letting go glides the
+			# ride down to a landing (descending pitch also satisfies the touch-down check)
+			_input = Vector2(0.0, 0.35)
 		else:
 			# hold current speed (target == _speed) so momentum carries — no forced brake-to-zero
 			var ms := float(PROFILES[profile]["max_speed"])
@@ -1297,9 +1299,10 @@ func drive_input_world(world_dir: Vector2) -> void:
 	var want := atan2(world_dir.x, world_dir.y)          # +Z forward -> yaw = atan2(x, z)
 	var err := wrapf(want - rotation.y, -PI, PI)
 	if _airborne:
-		# flight has NO reverse — bank+yaw toward the heading, level pitch (cruise throttle implicit).
+		# flight has NO reverse — bank+yaw toward the heading, and CLIMB while the stick is
+		# pushed (the soft ceiling in _drive_air caps it at ALT_MAX; releasing sinks, above).
 		# rotation.y += -_input.x * rate, so a POSITIVE heading error (need +yaw) needs _input.x < 0.
-		_input = Vector2(-clampf(err / HEADING_BAND, -1.0, 1.0), 0.0)
+		_input = Vector2(-clampf(err / HEADING_BAND, -1.0, 1.0), -thr * 0.8)
 		return
 	# REVERSE vs forward (all ground/water rides + grounded mounts). Latch with hysteresis so the
 	# choice can't chatter at the threshold. _drive_ground already integrates a negative _speed and
@@ -1404,6 +1407,7 @@ func _seat_driver() -> void:
 	var dh := _world_aabb(d).size.y
 	if dh < 0.5:
 		dh = 1.7
+	dh = minf(dh, 2.8)   # skinned-mesh AABBs can balloon mid-clip — a driver is never taller than this
 	if _is_mount:
 		_seat_y_off = 0.12 - HIP_RATIO * dh   # astride: hips just above the AABB back-line
 		_seated = GPose.ride(d)

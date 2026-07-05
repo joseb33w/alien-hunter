@@ -52,6 +52,7 @@ var decloak_t := 0.0        # forced-visible window after taking a hit
 var _ally_marker: MeshInstance3D = null
 var _ally_atk_cd := 0.0
 var _meshes: Array = []     # cached MeshInstance3D list (flash / cloak)
+var _stuck_t := 0.0
 
 static var _flash_mat: StandardMaterial3D = null
 
@@ -171,15 +172,17 @@ func _physics_process(delta: float) -> void:
 	# --- CHARGE (gorra): a committed rush along a captured heading ---
 	if charging_t > 0.0:
 		charging_t = max(0.0, charging_t - delta)
-		velocity = charge_dir * (speed * 3.6)
-		velocity.y = 0.0
+		velocity.x = charge_dir.x * (speed * 3.6)
+		velocity.z = charge_dir.z * (speed * 3.6)
+		_apply_gravity(delta)
 		move_and_slide()
 		_face(charge_dir)
+		if is_on_wall():
+			charging_t = 0.0   # slammed into scenery — end the rush instead of grinding on it
 		if dist < 1.8:
 			charging_t = 0.0
 			_play(c_attack, false)
-			if player.has_method("take_damage"):
-				player.call("take_damage", 18.0)
+			_hurt_player(18.0)
 		return
 	if power == "charge" and charge_cd <= 0.0 and dist > 5.0 and dist < 16.0:
 		charge_cd = 6.0
@@ -207,8 +210,7 @@ func _physics_process(delta: float) -> void:
 	if dist <= attack_range and atk_cd <= 0.0:
 		atk_cd = 1.3
 		_play(c_attack, false)
-		if player.has_method("take_damage"):
-			player.call("take_damage", melee_dmg)
+		_hurt_player(melee_dmg)
 
 	# ALWAYS seek a DISTINCT slot around the player -> enemies encircle, not bunch
 	var slot := ppos + Vector3(cos(slot_angle), 0.0, sin(slot_angle)) * surround_radius
@@ -227,8 +229,35 @@ func _physics_process(delta: float) -> void:
 	elif _cur != c_attack:
 		_play(c_idle)
 
+	# OBSTACLE ROUTING: the shared navmesh is flat (props aren't carved) and RVO ignores
+	# statics — so steer ALONG a blocking wall, and hop past it if contact persists.
+	if is_on_wall() and desired.length() > 0.1:
+		var n := get_wall_normal()
+		n.y = 0.0
+		if n.length() > 0.05:
+			n = n.normalized()
+			var side := 1.0 if fmod(slot_angle, TAU) < PI else -1.0
+			var lateral := Vector3(-n.z, 0.0, n.x) * side
+			desired = (desired - n * minf(0.0, desired.dot(n))) * 0.4 + lateral * speed * 0.8
+		_stuck_t += delta
+		if _stuck_t > 1.4:
+			slot_angle += 1.2
+			global_position += Vector3(-n.z, 0.0, n.x) * 1.4 + n * 0.4
+			_stuck_t = 0.0
+	else:
+		_stuck_t = 0.0
+
 	# feed desired velocity into RVO avoidance; actual move happens in the callback
 	agent.set_velocity(desired)
+
+
+# The player BODY carries no script — damage routes to main (the world), which owns
+# RpgState + the hurt feedback. Kept player-first for any future scripted player body.
+func _hurt_player(d: float) -> void:
+	if player != null and player.has_method("take_damage"):
+		player.call("take_damage", d)
+	elif is_instance_valid(world) and world.has_method("take_damage"):
+		world.call("take_damage", d)
 
 
 # ---------------- allied (companion) behavior ----------------
@@ -348,12 +377,15 @@ func _spit_acid(target_pos: Vector3) -> void:
 	var dmg := 8.0 if power == "acid" else 12.0
 	var me := self
 	var pl := player
+	var w := world
 	var tw := glob.create_tween()   # bound to the glob — dies with it (never the scene root)
 	tw.tween_property(glob, "global_position", dest, flight)
 	tw.tween_callback(func() -> void:
 		if is_instance_valid(pl) and glob.global_position.distance_to(pl.global_position + Vector3(0, 0.9, 0)) < 1.7:
 			if pl.has_method("take_damage"):
 				pl.call("take_damage", dmg)
+			elif is_instance_valid(w) and w.has_method("take_damage"):
+				w.call("take_damage", dmg)
 		if is_instance_valid(me):
 			me._burst(glob.global_position, Color(0.5, 0.95, 0.1), 14)
 		glob.queue_free())
@@ -501,10 +533,19 @@ func _burst(at: Vector3, col: Color, n: int) -> void:
 
 # ---------------- anim ----------------
 
+func _apply_gravity(delta: float) -> void:
+	if is_on_floor():
+		velocity.y = 0.0
+	else:
+		velocity.y -= 20.0 * delta
+
+
 func _on_safe_velocity(safe: Vector3) -> void:
 	if dead:
 		return
-	velocity = Vector3(safe.x, 0.0, safe.z)
+	velocity.x = safe.x
+	velocity.z = safe.z
+	_apply_gravity(get_physics_process_delta_time())
 	move_and_slide()
 
 

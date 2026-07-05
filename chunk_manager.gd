@@ -853,6 +853,8 @@ func build_cell(rec: Dictionary, gx: int, gz: int) -> Dictionary:
 			root.add_child(e)
 			var ang := TAU * float(i) / float(enemy_n)
 			e.global_position = centre + Vector3(cos(ang) * (half * 0.45), 0.0, sin(ang) * (half * 0.45))
+			# lift onto the terrain surface (enemies fall with gravity now — never spawn under it)
+			e.global_position.y = _ground_y(e.global_position.x, e.global_position.z) + 0.2
 			var model: Node = (builder.cache[emu] as Node).duplicate()
 			e.setup(player, model, world_main, i, enemy_n, String(rec.get("enemy_type", "skeleton")))
 			cell_enemies.append(e)
