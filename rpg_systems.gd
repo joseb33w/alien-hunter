@@ -44,8 +44,8 @@ var level := 1
 var xp := 0
 var xp_next := 30
 var gold := 0
-var inventory: Array = ["rusty_sword"]
-var equipped_weapon := "rusty_sword"
+var inventory: Array = ["wrist_blade"]
+var equipped_weapon := "wrist_blade"
 var flags := {}                 # quest/world flags (e.g. dungeon_cleared) — gate seams
 
 

@@ -148,6 +148,11 @@ var _cur := ""
 func _physics_process(delta: float) -> void:
 	if dead or not is_instance_valid(player):
 		return
+	# fall-catcher (parity with the player's): a cell built late under a spawned enemy must
+	# never drop a quest target into the void
+	if global_position.y < -30.0 and is_instance_valid(world) and world.has_method("ground_height_at"):
+		global_position.y = float(world.call("ground_height_at", global_position.x, global_position.z)) + 0.3
+		velocity = Vector3.ZERO
 	atk_cd = max(0.0, atk_cd - delta)
 	flash_t = max(0.0, flash_t - delta)
 	spit_cd = max(0.0, spit_cd - delta)

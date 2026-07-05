@@ -362,6 +362,15 @@ func _physics_process(delta: float) -> void:
 			# parallel (a typed Vehicle call would parse-fail until the method exists).
 			var av = active_vehicle
 			av.drive_input_world(Vector2(d3.x, d3.z))
+			# keep every ride INSIDE the authored grid — a flying ship over the border would
+			# out-range the streamer and watch the whole world evict behind it (QA P1)
+			if chunk_mode and chunk_manager != null:
+				var rect := chunk_manager.grid_world_rect()
+				var vp3: Vector3 = (av as Node3D).global_position
+				var cx := clampf(vp3.x, rect.position.x + 2.0, rect.end.x - 2.0)
+				var cz := clampf(vp3.z, rect.position.y + 2.0, rect.end.y - 2.0)
+				if cx != vp3.x or cz != vp3.z:
+					(av as Node3D).global_position = Vector3(cx, vp3.y, cz)
 			return
 	# Wave 3 (sittable furniture): a SEATED player doesn't move — but movement input IS the intent
 	# to leave, so it stands them up first (interaction restores the pose + places them beside the
@@ -606,18 +615,11 @@ func _update_stats() -> void:
 func _refresh_stats() -> void:
 	if rpg == null:
 		return
-	var streamer = chunk_manager if chunk_mode else scene_manager
-	var alive := 0
-	if streamer:
-		for e in streamer.enemies:
-			if is_instance_valid(e) and not e.dead:
-				alive += 1
-	var area: String = String(streamer.current_id) if streamer != null else ""
 	var obj := quest.current_objective() if quest else ""
-	stats.text = "Lv %d  HP %d/%d  XP %d/%d  Gold %d  Wpn:%s\nArea:%s  enemies %d  fps %d\nInv: %s\n%s" % [
-		rpg.level, int(rpg.hp), int(rpg.max_hp), rpg.xp, rpg.xp_next, rpg.gold,
-		rpg.item_name(rpg.equipped_weapon), area, alive, Engine.get_frames_per_second(),
-		rpg.inventory_summary(), obj]
+	stats.text = "Lv %d  HP %d/%d  XP %d/%d\nShards %d   Wpn: %s%s" % [
+		rpg.level, int(rpg.hp), int(rpg.max_hp), rpg.xp, rpg.xp_next,
+		rpg.gold, rpg.item_name(rpg.equipped_weapon),
+		("\n" + obj) if obj != "" else ""]
 
 
 # ---------------- combat / hooks ----------------
@@ -641,7 +643,9 @@ func _attack() -> void:
 	swing_t = 0.22
 	AudioManager.play_sfx("attack")
 	var dmg := rpg.weapon_damage()
-	var fwd := -player.global_transform.basis.z
+	# facing is +basis.z — the ONE stack convention (movement look_at, _fire_ranged, GPose all
+	# agree); the legacy -basis.z here hit enemies BEHIND the player (QA P0)
+	var fwd := player.global_transform.basis.z
 	for e in streamer.enemies:
 		if not is_instance_valid(e) or e.dead:
 			continue
@@ -749,6 +753,13 @@ func _on_rpg_changed() -> void:
 		_sync_equip_visual()   # fire-and-forget — the latch + loop absorb re-entry
 
 
+# Enemy fall-catcher hook (enemy.gd): the rendered-surface height under any point.
+func ground_height_at(x: float, z: float) -> float:
+	if chunk_mode and chunk_manager != null:
+		return chunk_manager._ground_y(x, z)
+	return 0.0
+
+
 func take_damage(d: float) -> void:
 	if d <= 0.0:
 		return
@@ -758,12 +769,37 @@ func take_damage(d: float) -> void:
 	if chunk_mode:
 		if rpg.take_damage(d):
 			rpg.hp = rpg.max_hp   # forgiving respawn in place (no area transition in chunk mode)
+			_show_downed()
 		return
 	if scene_manager == null or scene_manager.transitioning:
 		return
 	if rpg.take_damage(d):
 		rpg.hp = rpg.max_hp        # forgiving respawn: full heal in the current area
+		_show_downed()
 		scene_manager.goto_area(scene_manager.current_id, scene_manager.areas[scene_manager.current_id].spawns.keys()[0])
+
+
+# Death beat: heavy vignette + a fading banner so falling never reads as a silent heal (QA P2).
+func _show_downed() -> void:
+	AudioManager.play_sfx("death", -2.0, 0.7)
+	if damage_vignette != null:
+		damage_vignette.color.a = 0.65
+		var tv := damage_vignette.create_tween()
+		tv.tween_property(damage_vignette, "color:a", 0.0, 1.6)
+	var l := Label.new()
+	l.text = "YOU WERE STRUCK DOWN\nThe hunt continues..."
+	l.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	l.add_theme_font_size_override("font_size", 40)
+	l.add_theme_color_override("font_color", Color(0.95, 0.4, 0.35))
+	l.set_anchors_preset(Control.PRESET_CENTER)
+	l.offset_left = -280
+	l.offset_right = 280
+	l.offset_top = -120
+	hud_layer.add_child(l)
+	var tw := l.create_tween()
+	tw.tween_interval(1.6)
+	tw.tween_property(l, "modulate:a", 0.0, 0.8)
+	tw.tween_callback(l.queue_free)
 
 
 ## Allied mylah companions mend the hunter. Returns true when any healing was applied.

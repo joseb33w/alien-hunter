@@ -101,6 +101,14 @@ func _physics_process(_d: float) -> void:
 
 func add_chest(pos: Vector3, contents: Array, gold := 0, parent: Node = null, cell_key := "") -> void:
 	var node := _box(pos + Vector3(0, 0.45, 0), Vector3(0.9, 0.9, 0.9), Color(0.85, 0.68, 0.22), parent)
+	# an alien cache, not a flat yellow box: brushed-metal surface + a glowing seam band
+	node.material_override = GSurf.surface({"color": [0.55, 0.42, 0.20], "rough": 0.35, "metal": 0.9, "bump": 0.3, "tile": 1.2})
+	var seam := MeshInstance3D.new()
+	var sm := BoxMesh.new()
+	sm.size = Vector3(0.94, 0.1, 0.94)
+	sm.material = GSurf.emissive(Color(0.3, 0.95, 0.85), 2.5)
+	seam.mesh = sm
+	node.add_child(seam)
 	items.append({kind = "chest", pos = pos, node = node, label = "Open Chest",
 		contents = contents, gold = gold, opened = false, cell = cell_key})
 
@@ -679,7 +687,7 @@ func _build_ui(hud: CanvasLayer) -> void:
 	prompt.add_theme_font_size_override("font_size", 26)
 	prompt.add_theme_color_override("font_color", Color(1, 1, 0.6))
 	prompt.set_anchors_preset(Control.PRESET_CENTER_BOTTOM)
-	prompt.position = Vector2(-160, -270)
+	prompt.position = Vector2(-160, -420)   # clear of the bottom-right touch cluster (QA overlap)
 	hud.add_child(prompt)
 
 	# System-message box (chest opened / door locked / item found) — moved to the TOP so it
