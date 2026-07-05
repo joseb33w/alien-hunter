@@ -1,0 +1,50 @@
+{ "quests": [
+  {
+    "id": "m1_first_blood",
+    "name": "First Blood",
+    "steps": [
+      { "objective": {"type": "kill_count", "target": "skarn", "count": 3},
+        "desc": "Hunt 3 Skarn acid-spitters near their camp", "marker": [64, 128] }
+    ],
+    "rewards": { "xp": 60, "gold": 40 },
+    "on_complete_flags": ["skarn_hunted"]
+  },
+  {
+    "id": "m2_relic",
+    "name": "The Precursor Relic",
+    "steps": [
+      { "objective": {"type": "collect", "target": "trophy_relic"},
+        "desc": "Retrieve the Precursor Relic from the ancient ruins", "marker": [96, 80] }
+    ],
+    "rewards": { "xp": 80, "gold": 60 }
+  },
+  {
+    "id": "m3_alliance",
+    "name": "Broker an Alliance",
+    "steps": [
+      { "objective": {"type": "set_flag", "target": "allied_any"},
+        "desc": "Befriend a species: walk to a camp elder and press ALLY", "marker": [128, 160] }
+    ],
+    "rewards": { "xp": 100, "gold": 50 }
+  },
+  {
+    "id": "m4_break_gorra",
+    "name": "Break the Gorra Warband",
+    "steps": [
+      { "objective": {"type": "kill_count", "target": "gorra", "count": 3},
+        "desc": "Clear 3 Gorra chargers from their hostile camp", "marker": [160, 32] }
+    ],
+    "rewards": { "xp": 120, "gold": 80 },
+    "on_complete_flags": ["gorra_broken"]
+  },
+  {
+    "id": "m5_broodmaw",
+    "name": "The Broodmaw",
+    "steps": [
+      { "objective": {"type": "kill_count", "target": "broodmaw", "count": 1},
+        "desc": "Slay the Broodmaw in its lair at the world's edge", "marker": [176, 176] }
+    ],
+    "rewards": { "xp": 300, "gold": 200 },
+    "on_complete_flags": ["broodmaw_slain"]
+  }
+] }

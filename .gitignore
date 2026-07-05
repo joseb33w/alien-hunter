@@ -1,0 +1,9 @@
+.godot/
+out/
+.gogi-cache/
+verify/
+playbooks/
+godot
+*.tmp
+architect_notes.md
+qa_report.md
